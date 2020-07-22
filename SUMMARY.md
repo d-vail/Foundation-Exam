@@ -9,4 +9,5 @@
 ## 2019
 
 * [Fall 2019](2019/fall-2019.md)
-
+* [Summer 2019](2019/summer-2019.md)
+* [Spring 2019](2019/spring-2019.md)
