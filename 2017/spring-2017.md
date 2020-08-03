@@ -106,7 +106,7 @@ Adjusted List:
 
 Return Value: 5
 
-_**Grading: 2 pts return value \(all or nothing\), 3 pts list, give partial for list as you see fit.**_
+_**Grading: 2 pts return value (all or nothing), 3 pts list, give partial for list as you see fit.**_
 {% endtab %}
 {% endtabs %}
 

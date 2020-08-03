@@ -128,7 +128,7 @@ Convert the following infix expression to postfix using a stack. Show the conten
 
 ![](../.gitbook/assets/summer-2017-ds-a-3-sol.png)
 
-_**Grading: 1 point for each stack, 2 points for the whole expression \(partial credit allowed.\)**_
+_**Grading: 1 point for each stack, 2 points for the whole expression (partial credit allowed.)**_
 {% endtab %}
 {% endtabs %}
 

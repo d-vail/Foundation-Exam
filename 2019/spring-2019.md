@@ -6,6 +6,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 
 This problem relies on the following struct definition:
@@ -93,6 +94,7 @@ void freeEmployeeArray(Employee *array, int n)
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 
 Consider the following code:
@@ -148,8 +150,10 @@ That specific recursive call is only executed when `current == head->next` \(i.e
 Note that none of the excessive `->next->next->next` accesses would ever cause segfaults here, since we always have four nodes in the linked list, and we never get to those accesses unless _current_ is the second node in the linked list. Even the `head->next->next->next->next` access wouldn’t cause a segfault; it would just pass NULL to the function recursively, which would hit a base case and return gracefully.
 
 _**Grading:**_
-
-**10 points** for a correct answer. Note: If the 2 nd node has a value 10 less than the 3 rd node, still award 10/10. **5 points** if the 2 nd node has a value 1 greater than the 3 rd node, thereby triggering the `head->next- >next->next->next` access. That doesn’t cause a segfault, but it’s an understandable mistake and is the next best thing. Note: If the 2 nd node has a value 1 less than the 3 rd node, still award 5/10. **2 points** otherwise, as long as they draw a linked list with exactly four nodes, and each node contains an integer. \(Also, any circular list with 4 nodes gets 2 points maximum.\) **0 points** otherwise.
+- **10 points** for a correct answer. Note: If the 2 nd node has a value 10 less than the 3 rd node, still award 10/10.
+- **5 points** if the 2 nd node has a value 1 greater than the 3 rd node, thereby triggering the `head->next- >next->next->next` access. That doesn’t cause a segfault, but it’s an understandable mistake and is the next best thing. Note: If the 2 nd node has a value 1 less than the 3 rd node, still award 5/10.
+- **2 points** otherwise, as long as they draw a linked list with exactly four nodes, and each node contains an integer. \(Also, any circular list with 4 nodes gets 2 points maximum.\)
+- **0 points** otherwise.
 
 _**FURTHER GRADING NOTES: A circular list should get at most 2 points. It's clear from the question that the intent is for the list not to be circular but a regular linked list. The reason this is clear is that the way the code is written, we look for the base case with a NULL pointer, but a circular linked list doesn't have one of those. So, ANY circular linked list of size 4 will cause an infinite loop, so one can put any four values down and the second item would be satisfied, which means the second item would be irrelevant. This should help a student realize that the intent was for the answer to be a regular linked list that isn't circular and what's being graded are the specific values they pick for the four nodes. When people refer to a regular linked list, they just say "linked list", they don't say "a linked list that isn't circular and doesn't have links." Instead, the assumption is that unless specified otherwise, a linked list has a head and a single pointer to the next node.**_
 {% endtab %}
@@ -159,6 +163,7 @@ _**FURTHER GRADING NOTES: A circular list should get at most 2 points. It's clea
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 5 points
 
 Consider the following function:
@@ -203,7 +208,11 @@ What will be the exact output of the function above? \(You may assume the existe
 {% tab title="Solution" %}
 _**Solution:**_ 3 18 58 23 12 31 19 26 3 Tada! \(This function just ends up printing the contents of the array in order.\)
 
-_**Grading:**_ **5 points** for the correct output **4 points** if their output was simply missing the “Tada!” or if their output was off by one value **2 points** if they printed the array in reverse order. **0 points** otherwise.
+_**Grading:**_
+- **5 points** for the correct output
+- **4 points** if their output was simply missing the “Tada!” or if their output was off by one value
+- **2 points** if they printed the array in reverse order.
+- **0 points** otherwise.
 
 Feel free to award partial credit if you encounter something else that seems reasonable.
 {% endtab %}
@@ -238,12 +247,11 @@ void print_postorder(node *root)
 ```
 
 **Grading**
-
-**+1 point** for correct base case
-**+1 point** for making both recursive calls (regardless of order)
-**+1 point** for printing root->data (regardless of order)
-**+1 point** for having both recursive calls, printing root->data, and doing all those things in the correct order.
-**+1 point** for getting all the syntax correct. (So, for example, if they called postorder(root left) and postorder(root.right), they can get the 1 point for making both recursive calls, but they lose this 1 point for using the dot instead of the arrow.)
+- **+1 point** for correct base case
+- **+1 point** for making both recursive calls (regardless of order)
+- **+1 point** for printing root->data (regardless of order)
+- **+1 point** for having both recursive calls, printing root->data, and doing all those things in the correct order.
+- **+1 point** for getting all the syntax correct. (So, for example, if they called postorder(root left) and postorder(root.right), they can get the 1 point for making both recursive calls, but they lose this 1 point for using the dot instead of the arrow.)
 
 {% endtab %}
 
@@ -292,18 +300,18 @@ void print_postorder(node *root)
 ![](../.gitbook/assets/spring-2019-ds-b-2-a-sol.png)
 
 **Grading (4 pts for part a):**
-4/4 if correct
-2/4 if not correct, but they satisfy at least one of the following: (1) 24 ends up at the root, (2) the structure of the tree is the same as above (despite where the values ended up).
-0/4 otherwise
+- 4/4 if correct
+- 2/4 if not correct, but they satisfy at least one of the following: (1) 24 ends up at the root, (2) the structure of the tree is the same as above (despite where the values ended up).
+- 0/4 otherwise
 
 **(b)**
 
 ![](../.gitbook/assets/spring-2019-ds-b-2-b-sol.png)
 
 **Grading (4 pts for part b):**
-4/4 if correct
-2/4 if not correct, but they satisfy at least one of the following: (1) 41 ends up at the root, (2) the structure of the tree is the same as above (despite where the values ended up).
-0/4 otherwise
+- 4/4 if correct
+- 2/4 if not correct, but they satisfy at least one of the following: (1) 41 ends up at the root, (2) the structure of the tree is the same as above (despite where the values ended up).
+- 0/4 otherwise
 
 **(c)**
 
@@ -342,9 +350,9 @@ Solution: O(log n)
 ![](../.gitbook/assets/spring-2019-ds-b-3-sol.png)
 
 **Grading (6 points for part a):**
-6/6 for correct answer.
-3/6 for something reasonably close. (Use your judgment. However, 84 must be the root in order for them to earn these points.)
-0/6 otherwise.
+- 6/6 for correct answer.
+- 3/6 for something reasonably close. (Use your judgment. However, 84 must be the root in order for them to earn these points.)
+- 0/6 otherwise.
 
 **(b)**
 
@@ -379,6 +387,7 @@ Solution: O(n)
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 {% endtab %}
 
@@ -391,6 +400,7 @@ Solution: O(n)
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 5 points
 {% endtab %}
 
@@ -403,6 +413,7 @@ Solution: O(n)
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 {% endtab %}
 
@@ -415,6 +426,7 @@ Solution: O(n)
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 5 points
 {% endtab %}
 
@@ -427,6 +439,7 @@ Solution: O(n)
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 {% endtab %}
 
@@ -439,6 +452,7 @@ Solution: O(n)
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 {% endtab %}
 

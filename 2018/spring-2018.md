@@ -257,9 +257,9 @@ When we delete the minimum, 2, stored at the top, 20, the value in the "last" lo
 ![](../.gitbook/assets/spring-2018-ds-b-2-sol-b.png)
 
 **Grading**
-2 pts for correct drawing, 1 pt is something minor is off, 0 otherwise.
-1 pt if structural location of 20 is removed, 1 pt for incorrect percolateDown,
-2 pts for correct percolateDown. (If the drawing is significantly wrong, don't give any credit for the second part. If it's slightly wrong, map points as best as possible.)
+- 2 pts for correct drawing, 1 pt is something minor is off, 0 otherwise.
+- 1 pt if structural location of 20 is removed, 1 pt for incorrect percolateDown,
+- 2 pts for correct percolateDown. (If the drawing is significantly wrong, don't give any credit for the second part. If it's slightly wrong, map points as best as possible.)
 
 {% endtab %}
 {% endtabs %}
