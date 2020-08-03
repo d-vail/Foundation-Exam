@@ -1,0 +1,153 @@
+# Summer 2016
+
+## Section 1 A
+
+### A 1: Recursive Functions
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### A 2: Summations
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### A 3: Stacks
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### A 4: Data Structures Tracing - AVL Trees, Binary Heaps
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### A 5: Base Conversion
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+
+## Section 1 B
+
+### B 1: Algorithm Analysis
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### B 2: Algorithm Analysis
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### B 3: Linked Lists
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### B 4: Binary Trees
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### B 5: Sorting
+
+{% tabs %}
+{% tab title="Question" %}
+#### 10 points
+
+
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+
+## PDF Files
+
+{% file src="../.gitbook/assets/FE-May16.pdf" caption="Summer 2016 Exam"%}
+{% file src="../.gitbook/assets/FE-May16-Sol.pdf" caption="Summer 2016 Exam Solutions"%}
+{% file src="../.gitbook/assets/FE-May16-Info.pdf" caption="Summer 2016 Exam Statistics"%}
