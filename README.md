@@ -50,6 +50,7 @@
 * [ ] [Fall 2017, Data Structures A 1](2017/fall-2017.md#a-1-dynamic-memory-management-in-c)
 * [ ] [Summer 2017, Data Structures A 1](2017/summer-2017.md#a-1-dynamic-memory-management-in-c)
 * [ ] [Spring 2017, Data Structures A 1](2017/spring-2017.md#a-1-dynamic-memory-management-in-c)
+* [ ] [Fall 2016, Data Structures A 1](2016/fall-2016.md#a-1-dynamic-memory-management-in-c)
 
 ### Hash Tables
 
