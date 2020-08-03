@@ -6,8 +6,8 @@
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -16,12 +16,12 @@
 {% endtab %}
 {% endtabs %}
 
-### A 2: Summations
+### A 2: Summations and Algorithm Analysis
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -30,12 +30,12 @@
 {% endtab %}
 {% endtabs %}
 
-### A 3: Stacks
+### A 3: Stacks and Queues
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -44,12 +44,12 @@
 {% endtab %}
 {% endtabs %}
 
-### A 4: Data Structures Tracing - AVL Trees, Binary Heaps
+### A 4: Hash Tables
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -62,8 +62,8 @@
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -71,16 +71,15 @@
 
 {% endtab %}
 {% endtabs %}
-
 
 ## Section 1 B
 
-### B 1: Algorithm Analysis
+### B 1: Analysis and Critical Thinking: AVL Trees, Hash Tables, and Heaps
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -89,12 +88,12 @@
 {% endtab %}
 {% endtabs %}
 
-### B 2: Algorithm Analysis
+### B 2: Summations and Algorithm Analysis
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -107,8 +106,8 @@
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -121,8 +120,8 @@
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -135,8 +134,8 @@
 
 {% tabs %}
 {% tab title="Question" %}
-#### 10 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -145,9 +144,8 @@
 {% endtab %}
 {% endtabs %}
 
-
 ## PDF Files
 
-{% file src="../.gitbook/assets/FE-May16.pdf" caption="Summer 2016 Exam"%}
-{% file src="../.gitbook/assets/FE-May16-Sol.pdf" caption="Summer 2016 Exam Solutions"%}
-{% file src="../.gitbook/assets/FE-May16-Info.pdf" caption="Summer 2016 Exam Statistics"%}
+{% file src="../.gitbook/assets/FE-Aug16.pdf" caption="Summer 2016 Exam"%}
+{% file src="../.gitbook/assets/FE-Aug16-Sol.pdf" caption="Summer 2016 Exam Solutions"%}
+{% file src="../.gitbook/assets/FE-Aug16-Info.pdf" caption="Summer 2016 Exam Statistics"%}

@@ -1,14 +1,14 @@
 # Spring 2016
 
-## Data Structures
+## Section 1 A
 
-### A 1: Dynamic Memory Management in C
+### A 1: Recursive Functions
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -16,27 +16,13 @@
 {% endtab %}
 {% endtabs %}
 
-### A 2: Linked Lists
+### A 2: Summations
 
 {% tabs %}
 {% tab title="Question" %}
-#### 5 points
 
-
-{% endtab %}
-
-{% tab title="Solution" %}
-
-{% endtab %}
-{% endtabs %}
-
-### A 3: Stacks: Infix to Postfix Conversion
-
-{% tabs %}
-{% tab title="Question" %}
 #### 10 points
 
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -44,13 +30,13 @@
 {% endtab %}
 {% endtabs %}
 
-### B 1: Binary Trees
+### A 3: Stacks
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -58,27 +44,13 @@
 {% endtab %}
 {% endtabs %}
 
-### B 2: Advanced Data Structures: Binary Heaps
+### A 4: Data Structures Tracing - AVL Trees, Binary Heaps
 
 {% tabs %}
 {% tab title="Question" %}
-#### 5 points
 
-
-{% endtab %}
-
-{% tab title="Solution" %}
-
-{% endtab %}
-{% endtabs %}
-
-### B 3: Advanced Tree Structures: Trie
-
-{% tabs %}
-{% tab title="Question" %}
 #### 10 points
 
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -86,15 +58,13 @@
 {% endtab %}
 {% endtabs %}
 
-## Algorithms and Analysis Tools
-
-### A 1: Algorithm Analysis
+### A 5: Base Conversion
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -102,27 +72,15 @@
 {% endtab %}
 {% endtabs %}
 
-### A 2: Algorithm Analysis
+## Section 1 B
+
+### B 1: Algorithm Analysis
 
 {% tabs %}
 {% tab title="Question" %}
-#### 5 points
 
-
-{% endtab %}
-
-{% tab title="Solution" %}
-
-{% endtab %}
-{% endtabs %}
-
-### A 3: Summations and Recurrence Relations
-
-{% tabs %}
-{% tab title="Question" %}
 #### 10 points
 
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -130,13 +88,13 @@
 {% endtab %}
 {% endtabs %}
 
-### B 1: Recursive Coding
+### B 2: Algorithm Analysis
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -144,12 +102,26 @@
 {% endtab %}
 {% endtabs %}
 
-### B 2: Sorting
+### B 3: Linked Lists
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
 
+{% endtab %}
+
+{% tab title="Solution" %}
+
+{% endtab %}
+{% endtabs %}
+
+### B 4: Binary Trees
+
+{% tabs %}
+{% tab title="Question" %}
+
+#### 10 points
 
 {% endtab %}
 
@@ -158,12 +130,12 @@
 {% endtab %}
 {% endtabs %}
 
-### B 3: Bitwise Operators
+### B 5: Sorting
 
 {% tabs %}
 {% tab title="Question" %}
-#### 5 points
 
+#### 10 points
 
 {% endtab %}
 
@@ -174,6 +146,6 @@
 
 ## PDF Files
 
-{% file src="../.gitbook/assets/FE-Dec16.pdf" caption="Spring 2016 Exam"%}
-{% file src="../.gitbook/assets/FE-Dec16-Sol.pdf" caption="Spring 2016 Exam Solutions"%}
-{% file src="../.gitbook/assets/FE-Dec16-Info.pdf" caption="Spring 2016 Exam Statistics"%}
+{% file src="../.gitbook/assets/FE-May16.pdf" caption="Spring 2016 Exam"%}
+{% file src="../.gitbook/assets/FE-May16-Sol.pdf" caption="Spring 2016 Exam Solutions"%}
+{% file src="../.gitbook/assets/FE-May16-Info.pdf" caption="Spring 2016 Exam Statistics"%}
