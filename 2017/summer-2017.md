@@ -125,7 +125,8 @@ Convert the following infix expression to postfix using a stack. Show the conten
 {% endtab %}
 
 {% tab title="Solution" %}
-![](https://github.com/d-vail/Foundation-Exam/tree/2d788bd004d534e5c5ef5d3be21aa87ca2b49abf/.gitbook/assets/summer-2017-ds-a-3-sol.png.png)
+
+![](../.gitbook/assets/summer-2017-ds-a-3-sol.png)
 
 _**Grading: 1 point for each stack, 2 points for the whole expression \(partial credit allowed.\)**_
 {% endtab %}
