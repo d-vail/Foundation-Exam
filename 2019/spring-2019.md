@@ -213,10 +213,55 @@ Feel free to award partial credit if you encounter something else that seems rea
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 5 points
+
+Write a **recursive** function to print a postorder traversal of all the integers in a binary tree. The node struct and function signature are as follows:
+
+```c
+typedef struct node
+{
+  struct node *left;
+  struct node *right;
+  int data;
+} node;
+
+void print_postorder(node *root)
+{
+  if (root == NULL)
+    return;
+  
+  postorder(root->left);
+  postorder(root->right);
+  printf("%d ", root->data);
+}
+```
+
+**Grading**
+
+**+1 point** for correct base case
+**+1 point** for making both recursive calls (regardless of order)
+**+1 point** for printing root->data (regardless of order)
+**+1 point** for having both recursive calls, printing root->data, and doing all those things in the correct order.
+**+1 point** for getting all the syntax correct. (So, for example, if they called postorder(root left) and postorder(root.right), they can get the 1 point for making both recursive calls, but they lose this 1 point for using the dot instead of the arrow.)
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+```c
+typedef struct node
+{
+  struct node *left;
+  struct node *right;
+  int data;
+} node;
+
+void print_postorder(node *root)
+{
+  // your code
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -225,10 +270,46 @@ Feel free to award partial credit if you encounter something else that seems rea
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
+
+**(a)** Show the result of inserting the value 24 into the following minheap.
+
+![](../.gitbook/assets/spring-2019-ds-b-2-a.png)
+
+**(b)** Show the result of deleting the root of the following minheap.
+
+![](../.gitbook/assets/spring-2019-ds-b-2-b.png)
+
+**(c)** Using big-oh notation, what is the **worst-case** runtime for deleting the minimum element from a minheap that has _n_ nodes?
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+**(a)**
+
+![](../.gitbook/assets/spring-2019-ds-b-2-a-sol.png)
+
+**Grading (4 pts for part a):**
+4/4 if correct
+2/4 if not correct, but they satisfy at least one of the following: (1) 24 ends up at the root, (2) the structure of the tree is the same as above (despite where the values ended up).
+0/4 otherwise
+
+**(b)**
+
+![](../.gitbook/assets/spring-2019-ds-b-2-b-sol.png)
+
+**Grading (4 pts for part b):**
+4/4 if correct
+2/4 if not correct, but they satisfy at least one of the following: (1) 41 ends up at the root, (2) the structure of the tree is the same as above (despite where the values ended up).
+0/4 otherwise
+
+**(c)**
+
+Solution: O(log n)
+
+**Grading: 2 pts, all or nothing.**
 
 {% endtab %}
 {% endtabs %}
@@ -237,10 +318,57 @@ Feel free to award partial credit if you encounter something else that seems rea
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
+
+**(a)** Show the result of inserting 37 into the following AVL tree:
+
+![](../.gitbook/assets/spring-2019-ds-b-3.png)
+
+**(b)** Using big-oh notation, give the **best-case** runtime for inserting a new element into an AVL tree with _n_ nodes:
+
+**(c)** Using big-oh notation, give the **worst-case** runtime for inserting a new element into an AVL tree with _n_ nodes:
+
+**(d)** Using big-oh notation, give the **best-case** runtime for inserting a new element into a binary search tree with _n_ nodes:
+
+**(e)** Using big-oh notation, give the **worst-case** runtime for inserting a new element into a binary search tree with _n_ nodes:
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+**(a)**
+
+![](../.gitbook/assets/spring-2019-ds-b-3-sol.png)
+
+**Grading (6 points for part a):**
+6/6 for correct answer.
+3/6 for something reasonably close. (Use your judgment. However, 84 must be the root in order for them to earn these points.)
+0/6 otherwise.
+
+**(b)**
+
+Solution: O(log n)
+
+**Grading: 1 point if correct, 0 otherwise**
+
+**(c)**
+
+Solution: O(log n)
+
+**Grading: 1 point if correct, 0 otherwise**
+
+**(d)**
+
+Solution: O(1)
+
+**Grading: 1 point if correct, 0 otherwise**
+
+**(e)**
+
+Solution: O(n)
+
+**Grading: 1 point if correct, 0 otherwise**
 
 {% endtab %}
 {% endtabs %}

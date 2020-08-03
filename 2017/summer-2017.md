@@ -136,10 +136,65 @@ _**Grading: 1 point for each stack, 2 points for the whole expression \(partial 
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
+ 
+**(a)** (3 pts) Given the following traversals, draw the Binary Search Tree they represent.
+
+Pre-Order: 2, 0, 1, 10, 9, 12
+Post-Order: 1, 0, 9, 12, 10, 2
+In-Order: 0, 1, 2, 9, 10, 12
+
+**(b)** If the nodes of the BST have the following structure, construct a recursive function to count the number of nodes in the tree.
+
+```c
+typedef struct bstNode
+{
+  struct bstNode *left, *right;
+  char word[20];
+} bstNode;
+
+int count(bstNode *root)
+{
+  // your code
+}
+```
+
+**(c)** (2 pts) Write a single line of code calling the count function that assigns the number of nodes in the left subtree of the tree pointed to by a pointer `myTreePtr` to the integer variable `leftCount`. You may assume that `myTreePtr` is not pointing to NULL and points to an actual `bstNode`.
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+**(a)**
+
+![](../.gitbook/assets/summer-2017-ds-b-1-sol.png)
+
+**_Grading: 1 pt placing 2 at the root, 1 pt left subtree, 1 pt right subtree_**
+
+**(b)**
+
+```c
+typedef struct bstNode
+{
+  struct bstNode *left, *right;
+  char word[20];
+} bstNode;
+
+int count(bstNode *root)
+{
+  if (root == NULL) return 0;                         // 2 pts
+  
+  // 1 pt 1, 1 pt left, 1 pt right
+  return 1 + count(root->left) + count(root->right);
+}
+```
+
+**(c)**
+
+```c
+int leftCount = count(myTreePtr->left);   // 2 pts
+```
 
 {% endtab %}
 {% endtabs %}
@@ -148,10 +203,42 @@ _**Grading: 1 point for each stack, 2 points for the whole expression \(partial 
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 5 points
+
+**(a)** (1 pts) In her computer science courses, Maria has learned some interesting things about prime numbers and data structures. She has decided to store some prime numbers in a Max-Heap using the tree representation of heaps. If Maria has stored 125 prime numbers, how tall would the Heap be?
+
+**(b)** (2 pts) Here is the Max-Heap after 5 insertions. Clearly draw a circle in the location where the next prime will initially be inserted. Also draw a pointer from the parent of this node initially and clearly indicate whether or not the pointer is a left or right pointer.
+
+![](../.gitbook/assets/summer-2017-ds-b-2.png)
+
+**(c)** (2 pts) Show each step of inserting 1609 into the Max-Heap from part (b). Please draw a different picture for each of the different positions 1609 will be in the heap.
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+**(a)**
+
+Height = 6
+
+Heaps are complete binary trees, so the height is determined by ⌊log 2 125⌋. You can also add the “levels” of the tree: 1 + 2 + 4 + 8 + 16 + 32 + 62.
+
+**_Grading: 1 pt all or nothing_**
+
+**(b)**
+
+![](../.gitbook/assets/summer-2017-ds-b-2-sol-a.png)
+
+The next node must be added as the left child of 1291.
+
+**_Grading: 2 pts all or nothing_**
+
+**(c)**
+
+![](../.gitbook/assets/summer-2017-ds-b-2-sol-b.png)
+
+Students should show both percolate up steps for 1609. 1 point per step. If they don't show the middle step and just have the final picture with 1609 as the root, award 1 point out of 2.
 
 {% endtab %}
 {% endtabs %}
@@ -160,10 +247,28 @@ _**Grading: 1 point for each stack, 2 points for the whole expression \(partial 
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
+
+**(a)** (8 pts) Create an AVL tree by inserting the following values in the order given: 42, 68, 35, 1, 70, 25, 79, and 59. Show the state of the tree after each insertion. Draw a box around each of these 8 trees.
+
+**(b)** (2 pts) Draw the state of the tree after the deletion of the node containing the value 79 from the tree at the end of part (a).
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+**(a)**
+
+![](../.gitbook/assets/summer-2017-ds-b-3-sol-a.png)
+
+**_Grading: Students should show each insertion step for 1 pt each. Imbalances should be detected and corrected for after inserting 25 and after inserting 79; detected at 35 and 68 respectively._**
+
+**(b)**
+
+![](../.gitbook/assets/summer-2017-ds-b-3-sol-b.png)
+
+**_Grading: Deleting 79 creates an imbalance at 70 that must be corrected._**
 
 {% endtab %}
 {% endtabs %}
