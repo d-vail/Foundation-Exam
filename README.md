@@ -17,6 +17,10 @@
 
 * [ ] [Fall 2019, Data Structures B 3](2019/fall-2019.md#b-3-avl-trees)
 * [ ] [Spring 2019, Data Structures B 3](2019/spring-2019.md#b-3-avl-trees)
+* [ ] [Summer 2018, Data Structures B 3](2018/summer-2018.md#b-3-avl-trees)
+* [ ] [Spring 2018, Data Structures B 3](2018/spring-2018.md#b-3-avl-trees)
+* [ ] [Summer 2017, Data Structures B 3](2017/summer-2017.md#b-3-avl-trees)
+* [ ] [Spring 2017, Data Structures B 3](2017/spring-2017.md#b-3-avl-trees)
 
 ### Backtracking
 
@@ -26,12 +30,19 @@
 ### Binary Search Trees
 
 * [ ] [Fall 2019, Data Structures B 1](2019/fall-2019.md#b-1-binary-search-trees)
+* [ ] [Fall 2018, Data Structures B 1](2018/fall-2018.md#b-1-binary-search-trees)
+* [ ] [Summer 2018, Data Structures B 1](2018/summer-2018.md#b-1-binary-search-trees)
+* [ ] [Spring 2018, Data Structures B 1](2018/spring-2018.md#b-1-binary-search-trees)
+* [ ] [Fall 2017, Data Structures B 1](2017/fall-2017.md#b-1-binary-search-trees)
+* [ ] [Summer 2017, Data Structures B 1](2017/summer-2017.md#b-1-binary-search-trees)
 
 ### Binary Trees
 
 * [ ] [Spring 2020, Data Structures B 1](2020/spring-2020.md#b-1-binary-trees)
 * [ ] [Summer 2019, Data Structures B 1](2019/summer-2019.md#b-1-binary-trees)
 * [ ] [Spring 2019, Data Structures B 1](2019/spring-2019.md#b-1-binary-trees)
+* [ ] [Spring 2017, Data Structures B 1](2017/spring-2017.md#b-1-binary-trees)
+* [ ] [Fall 2016, Data Structures B 1](2016/fall-2016.md#b-1-binary-trees)
 
 ### Bitwise Operators
 
@@ -56,11 +67,18 @@
 
 * [ ] [Spring 2020, Data Structures B 2](2020/spring-2020.md#b-2-hash-tables)
 * [ ] [Summer 2019, Data Structures B 2](2019/summer-2019.md#b-2-hash-tables)
+* [ ] [Fall 2018, Data Structures B 2](2018/fall-2018.md#b-2-hash-tables)
+* [ ] [Fall 2017, Data Structures B 2](2017/fall-2017.md#b-2-hash-tables)
+* [ ] [Spring 2017, Data Structures B 2](2017/spring-2017.md#b-2-hash-maps)
 
 ### Heaps
 
 * [ ] [Fall 2019, Data Structures B 2](2019/fall-2019.md#b-2-heaps)
 * [ ] [Spring 2019, Data Structures B 2](2019/spring-2019.md#b-2-heaps)
+* [ ] [Summer 2018, Data Structures B 2](2018/summer-2018.md#b-2-heaps)
+* [ ] [Spring 2018, Data Structures B 2](2018/spring-2018.md#b-2-binary-heaps)
+* [ ] [Summer 2017, Data Structures B 2](2017/summer-2017.md#b-2-heaps)
+* [ ] [Fall 2016, Data Structures B 2](2016/fall-2016.md#b-2-binary-heaps)
 
 ### Linked Lists
 
@@ -115,6 +133,9 @@
 
 * [ ] [Spring 2020, Data Structures B 3](2020/spring-2020.md#b-3-tries)
 * [ ] [Summer 2019, Data Structures B 3](2019/summer-2019.md#b-3-tries)
+* [ ] [Fall 2018, Data Structures B 3](2018/fall-2018.md#b-3-tries)
+* [ ] [Fall 2017, Data Structures B 3](2017/fall-2017.md#b-3-tries)
+* [ ] [Fall 2016, Data Structures B 3](2016/fall-2016.md#b-3-tries)
 
 ## By Exam
 

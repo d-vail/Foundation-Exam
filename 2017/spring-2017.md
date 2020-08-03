@@ -106,7 +106,7 @@ Adjusted List:
 
 Return Value: 5
 
-_**Grading: 2 pts return value (all or nothing), 3 pts list, give partial for list as you see fit.**_
+_**Grading: 2 pts return value \(all or nothing\), 3 pts list, give partial for list as you see fit.**_
 {% endtab %}
 {% endtabs %}
 
@@ -159,10 +159,9 @@ _**Grading notes: If they forget thisQ-&gt; each time, take off 2 pts total.**_
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-Michael took CS 1 last semester. During the Winter break he thought that it would be cool to keep track of all of the new words that he learned while reading a novel. He has stored all of his words (all 1-19 lowercase letters only) in alphabetic order in a binary search tree (BST). The nodes of his BST are stored in the following structure:
+Michael took CS 1 last semester. During the Winter break he thought that it would be cool to keep track of all of the new words that he learned while reading a novel. He has stored all of his words \(all 1-19 lowercase letters only\) in alphabetic order in a binary search tree \(BST\). The nodes of his BST are stored in the following structure:
 
 ```c
 typedef struct
@@ -172,7 +171,7 @@ typedef struct
 } bsNode;
 ```
 
-Michael wants to count the number of words in his binary search tree that come before a specified word in alphabetical order. Write a **_recursive_** function `countBefore` which takes in a pointer to the root of a binary search tree storing the words and a string `target` (of 1-19 lowercase letters only) and returns the number of words in the tree that **_come before_** `target`, alphabetically.
+Michael wants to count the number of words in his binary search tree that come before a specified word in alphabetical order. Write a _**recursive**_ function `countBefore` which takes in a pointer to the root of a binary search tree storing the words and a string `target` \(of 1-19 lowercase letters only\) and returns the number of words in the tree that _**come before**_ `target`, alphabetically.
 
 ```c
 int countBefore(bsNode* root, char target[])
@@ -183,7 +182,6 @@ int countBefore(bsNode* root, char target[])
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 int countBefore(bsNode* root, char target[])
 {
@@ -195,7 +193,6 @@ int countBefore(bsNode* root, char target[])
   return 1 + countBefore(root->left) + countBefore(root->right);
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -203,25 +200,19 @@ int countBefore(bsNode* root, char target[])
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
 
-**(a)** (3 pts) A set of students’ names are stored in a hash table implemented as an array of size 25. Their grades out of 100 are used as input to the hashing function. Suggest one hash function that can be used to store the names. Would your function cause clashes? Explain your answer.
+**\(a\)** \(3 pts\) A set of students’ names are stored in a hash table implemented as an array of size 25. Their grades out of 100 are used as input to the hashing function. Suggest one hash function that can be used to store the names. Would your function cause clashes? Explain your answer.
 
-**(b)** (2 pts) If the following students have the grades shown, and your hash function given in (a) is used, draw the state of the hash map after these 3 entries are inserted into the table. (Note: No need to show all 25 array slots, just clearly label the index and contents of each of the non-empty array slots.)
+**\(b\)** \(2 pts\) If the following students have the grades shown, and your hash function given in \(a\) is used, draw the state of the hash map after these 3 entries are inserted into the table. \(Note: No need to show all 25 array slots, just clearly label the index and contents of each of the non-empty array slots.\)
 
-**Mary 60**
-**Ben 75**
-**Dona 13**
-
+**Mary 60** **Ben 75** **Dona 13**
 {% endtab %}
 
 {% tab title="Solution" %}
+**\(a\)**
 
-**(a)**
-
-Hash function stores the student’s name in the array index score%25.
-Hashmap[score%25] = name score
+Hash function stores the student’s name in the array index score%25. Hashmap\[score%25\] = name score
 
 **Grading: 2 pts, note, MANY answers are valid here!!!**
 
@@ -229,16 +220,13 @@ This function can cause collisions since 2 distinct scores can has to the same i
 
 **Grading: 1 pt**
 
-**(b)**
+**\(b\)**
 
-**Mary 60**
-**Ben 75**
-**Dona 13**
+**Mary 60** **Ben 75** **Dona 13**
 
 ![](../.gitbook/assets/spring-2017-ds-b-2-sol.png)
 
-**_Grading: 2 pts for correct response (BASED ON THEIR HASH FUNCTION), 1 pt if some of their answer is correct_**
-
+_**Grading: 2 pts for correct response \(BASED ON THEIR HASH FUNCTION\), 1 pt if some of their answer is correct**_
 {% endtab %}
 {% endtabs %}
 
@@ -246,32 +234,27 @@ This function can cause collisions since 2 distinct scores can has to the same i
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-**(a)** (8 pts) Create an AVL tree by inserting the following values in the order given: 38, 72, 58, 16, 3, 24, 8, and 15. Show the state of the tree after each insertion.
+**\(a\)** \(8 pts\) Create an AVL tree by inserting the following values in the order given: 38, 72, 58, 16, 3, 24, 8, and 15. Show the state of the tree after each insertion.
 
-**(b)** (2 pts) Draw the state of the tree after the deletion of the node containing the value 16.
-
+**\(b\)** \(2 pts\) Draw the state of the tree after the deletion of the node containing the value 16.
 {% endtab %}
 
 {% tab title="Solution" %}
-
-**(a)**
+**\(a\)**
 
 Note: it the solution below, rotations aren't shown, just the final answers after the appropriate rotations. Steps where rotations were necessary are marked with an astericks at the root of the rotation.
 
 ![](../.gitbook/assets/spring-2017-ds-b-3-sol.png)
 
-**_Grading: 1 pt for each tree, as long as the insertion on step k was of equal difficulty to the correct insertion, give the point as long as the insertion is correct based on their answer for step k-1._**
+_**Grading: 1 pt for each tree, as long as the insertion on step k was of equal difficulty to the correct insertion, give the point as long as the insertion is correct based on their answer for step k-1.**_
 
-**(b)**
+**\(b\)**
 
 There are two possible answers here. One may replace the 16 with either the 15 or 24 and then delete the physical node where the 15 or 24 was stored, respectively. The answer on the left is what occurs when we replace 16 with 15 and the answer on the right is what occurs when we replace 16 with 24:
 
-**_Grading: 2 pts_**
-
-
+_**Grading: 2 pts**_
 {% endtab %}
 {% endtabs %}
 

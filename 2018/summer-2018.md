@@ -6,7 +6,6 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
 
 Suppose we have an array of structures containing information about our group for a group project. Each index should contain a group member’s name and phone number. The structure is shown below: names are stored as dynamically allocated strings and phone numbers are stored as integers. When the semester is over, we will delete this array. Write a function called deleteGroup that will take in this array and delete all the information, freeing all the memory space that the array previously took up. Your function should take 2 parameters: a pointer to the beginning of the array and an integer indicating the number of group members. It should return a null pointer representing the now empty array.
@@ -25,11 +24,9 @@ GroupMember* deleteGroup (GroupMember *group, int numMembers)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 typedef struct GroupMember
 {
@@ -49,7 +46,6 @@ GroupMember* deleteGroup (GroupMember *group, int numMembers)
   return NULL;                // 1 pt
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -57,7 +53,6 @@ GroupMember* deleteGroup (GroupMember *group, int numMembers)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
 Suppose we have a linked list implemented with the structure below. Write a function that will take in a pointer to the head of a list and inserts a node storing -1 _**after**_ each even value in the list. If the list is empty or there are no even values in the list, no modifications should be made to the list. \(For example, if the initial list had 2, 6, 7, 1, 3, and 8, the resulting list would have 2, -1, 6, -1, 7, 1, 8, -1.\)
@@ -74,11 +69,9 @@ void markEven(node *head)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 typedef struct node
 {
@@ -106,7 +99,6 @@ void markEven(node *head)
   }
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -114,7 +106,6 @@ void markEven(node *head)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
 **\(a\)** \(6 pts\) Convert the following infix expression to postfix using a stack. Show the contents of the stack at the indicated points \(1, 2, and 3\) in the infix expression.
@@ -131,7 +122,7 @@ int fib(int n)
 }
 ```
 
-Maximum Stack Depth: _**\_\_**_
+Maximum Stack Depth: _\*\*\_\_\*\*\_
 
 Is Max Stack Depth equal to the \# of recursive calls? YES NO \(Circle the correct answer.\)
 {% endtab %}
@@ -167,10 +158,9 @@ _**Grading: 2 pts correct, 0 otherwise**_
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-Complete writing function shown below **_recursively_**, so that it takes in a pointer to the root of a binary search tree, _root_, and an integer, _value_, and returns the number of nodes in the tree that are divisible by _value_. The struct used to store a node is shown below.
+Complete writing function shown below _**recursively**_, so that it takes in a pointer to the root of a binary search tree, _root_, and an integer, _value_, and returns the number of nodes in the tree that are divisible by _value_. The struct used to store a node is shown below.
 
 ```c
 typedef struct bstNode
@@ -184,11 +174,9 @@ int countDiv(bstNode *root, int value)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 typedef struct bstNode
 {
@@ -211,7 +199,6 @@ int countDiv(bstNode *root, int value)
   return res;
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -219,7 +206,6 @@ int countDiv(bstNode *root, int value)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
 
 ![](../.gitbook/assets/summer-2018-ds-b-2.png)
@@ -231,15 +217,12 @@ Insert 109 Step 2:
 Insert 109 Step 3:
 
 ![](../.gitbook/assets/summer-2018-ds-b-2-b.png)
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ![](../.gitbook/assets/summer-2018-ds-b-2-sol.png)
 
-**_Grading: 1 pt for each drawing, 2 pts for correct array, 1 pt for minor error in the array, 0 pt for major error in array._**
-
+_**Grading: 1 pt for each drawing, 2 pts for correct array, 1 pt for minor error in the array, 0 pt for major error in array.**_
 {% endtab %}
 {% endtabs %}
 
@@ -247,23 +230,21 @@ Insert 109 Step 3:
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-**(a)**
+**\(a\)**
 
 ![](../.gitbook/assets/summer-2018-ds-b-3-sol-a.png)
 
-**_Grading: Students should show each insertion step for 1 pt each. Imbalances should be detected and corrected for after inserting 54, 35, and 66; detected at 7, 54, and 8 respectively._**
+_**Grading: Students should show each insertion step for 1 pt each. Imbalances should be detected and corrected for after inserting 54, 35, and 66; detected at 7, 54, and 8 respectively.**_
 
-**(b)**
+**\(b\)**
 
 ![](../.gitbook/assets/summer-2018-ds-b-3-sol-b.png)
 
 Deleting 7 creates an imbalance at 8 that must be corrected.
 
-**_Grading: 1 pt for a valid BST without 7, 1 pt for it being the correct BST without 7 (0 pts if either 7 is still in it or it's not a valid BST.)_**
-
+_**Grading: 1 pt for a valid BST without 7, 1 pt for it being the correct BST without 7 \(0 pts if either 7 is still in it or it's not a valid BST.\)**_
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -277,9 +258,7 @@ Deleting 7 creates an imbalance at 8 that must be corrected.
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -291,9 +270,7 @@ Deleting 7 creates an imbalance at 8 that must be corrected.
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -305,9 +282,7 @@ Deleting 7 creates an imbalance at 8 that must be corrected.
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -319,9 +294,7 @@ Deleting 7 creates an imbalance at 8 that must be corrected.
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -333,9 +306,7 @@ Deleting 7 creates an imbalance at 8 that must be corrected.
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -347,9 +318,7 @@ Deleting 7 creates an imbalance at 8 that must be corrected.
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -364,3 +333,4 @@ Deleting 7 creates an imbalance at 8 that must be corrected.
 {% file src="../.gitbook/assets/FE-May18-Sol.pdf" caption="Summer 2018 Exam Solutions" %}
 
 {% file src="../.gitbook/assets/FE-May18-Info.pdf" caption="Summer 2018 Exam Statistics" %}
+

@@ -184,10 +184,9 @@ int eval(int* expr, int len)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-Write a **_recursive_** function to find the **_leaf node_** in a binary search tree storing the minimum value. (Thus, of all leaf nodes in the binary search tree, the function must return a pointer to the one that stores the smallest value.) If the pointer passed to the function is NULL (empty tree), the function should return NULL.
+Write a _**recursive**_ function to find the _**leaf node**_ in a binary search tree storing the minimum value. \(Thus, of all leaf nodes in the binary search tree, the function must return a pointer to the one that stores the smallest value.\) If the pointer passed to the function is NULL \(empty tree\), the function should return NULL.
 
 ```c
 typedef struct bstNode
@@ -202,11 +201,9 @@ bstNode* find_min_leaf(bstNode* root)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 typedef struct bstNode
 {
@@ -219,17 +216,16 @@ bstNode* find_min_leaf(bstNode* root)
 {
   if (root == NULL)                               // 1 pt
     return NULL;                                  // 1 pt
-  
+
   if (root->left == NULL && root->right == NULL)  // 2 pts
     return root;                                  // 1 pt
 
   if (root->left != NULL)                         // 1 pt
     return find_min_left(root->left);             // 2 pts
-  
+
   return find_min_left(root->right);              // 2 pts
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -237,30 +233,27 @@ bstNode* find_min_leaf(bstNode* root)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
 
-The array below stores a minimum binary heap. Draw the tree version of the corresponding binary heap. Then, remove the minimum value and show the resulting heap, in tree form. (Note: Index 0 isn't shown because index 1 stores the value at the root/top of heap.)
+The array below stores a minimum binary heap. Draw the tree version of the corresponding binary heap. Then, remove the minimum value and show the resulting heap, in tree form. \(Note: Index 0 isn't shown because index 1 stores the value at the root/top of heap.\)
 
 ![](../.gitbook/assets/spring-2018-ds-b-2.png)
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 Here is the initial heap, in tree form:
 
 ![](../.gitbook/assets/spring-2018-ds-b-2-sol-a.png)
 
-When we delete the minimum, 2, stored at the top, 20, the value in the "last" location replaces it (to maintain the structural integrity of the heap.) From there, we percolate 20 down, swapping it with 3, and then 12 to get the resulting tree:
+When we delete the minimum, 2, stored at the top, 20, the value in the "last" location replaces it \(to maintain the structural integrity of the heap.\) From there, we percolate 20 down, swapping it with 3, and then 12 to get the resulting tree:
 
 ![](../.gitbook/assets/spring-2018-ds-b-2-sol-b.png)
 
 **Grading**
-- 2 pts for correct drawing, 1 pt is something minor is off, 0 otherwise.
-- 1 pt if structural location of 20 is removed, 1 pt for incorrect percolateDown,
-- 2 pts for correct percolateDown. (If the drawing is significantly wrong, don't give any credit for the second part. If it's slightly wrong, map points as best as possible.)
 
+* 2 pts for correct drawing, 1 pt is something minor is off, 0 otherwise.
+* 1 pt if structural location of 20 is removed, 1 pt for incorrect percolateDown,
+* 2 pts for correct percolateDown. \(If the drawing is significantly wrong, don't give any credit for the second part. If it's slightly wrong, map points as best as possible.\)
 {% endtab %}
 {% endtabs %}
 
@@ -268,25 +261,21 @@ When we delete the minimum, 2, stored at the top, 20, the value in the "last" lo
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
 Show the result of inserting the following values into an initially empty AVL tree:
 
 10, 7, 3, 22, 16, 13, 5, 18, 20 and 19.
 
-Draw a box around your result **_after each insertion_**.
-
+Draw a box around your result _**after each insertion**_.
 {% endtab %}
 
 {% tab title="Solution" %}
-
 The resulting trees are as follows:
 
 ![](../.gitbook/assets/spring-2018-ds-b-3-sol.png)
 
-**_Grading: 1 pt per tree, try to judge each insertion based on their previous tree (so they can get a point even if their answer doesn't match as long as it is correct based on their previous tree.)_**
-
+_**Grading: 1 pt per tree, try to judge each insertion based on their previous tree \(so they can get a point even if their answer doesn't match as long as it is correct based on their previous tree.\)**_
 {% endtab %}
 {% endtabs %}
 
