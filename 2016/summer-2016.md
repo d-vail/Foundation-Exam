@@ -6,9 +6,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -20,9 +18,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -34,9 +30,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -48,9 +42,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -62,9 +54,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -78,9 +68,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -92,9 +80,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -106,9 +92,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -120,9 +104,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -134,9 +116,7 @@
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -146,6 +126,9 @@
 
 ## PDF Files
 
-{% file src="../.gitbook/assets/FE-Aug16.pdf" caption="Summer 2016 Exam"%}
-{% file src="../.gitbook/assets/FE-Aug16-Sol.pdf" caption="Summer 2016 Exam Solutions"%}
-{% file src="../.gitbook/assets/FE-Aug16-Info.pdf" caption="Summer 2016 Exam Statistics"%}
+{% file src="../.gitbook/assets/FE-Aug16.pdf" caption="Summer 2016 Exam" %}
+
+{% file src="../.gitbook/assets/FE-Aug16-Sol.pdf" caption="Summer 2016 Exam Solutions" %}
+
+{% file src="../.gitbook/assets/FE-Aug16-Info.pdf" caption="Summer 2016 Exam Statistics" %}
+

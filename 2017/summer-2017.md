@@ -7,8 +7,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 10 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -21,8 +19,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 10 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -35,8 +31,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 5 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -49,8 +43,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 10 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -63,8 +55,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 5 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -77,8 +67,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 10 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -93,8 +81,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 10 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -107,8 +93,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 5 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -121,8 +105,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 10 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -135,8 +117,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 5 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -149,8 +129,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 10 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -163,8 +141,6 @@
 {% tabs %}
 {% tab title="Question" %}
 #### 10 points
-
-
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -174,6 +150,9 @@
 
 ## PDF Files
 
-{% file src="../.gitbook/assets/FE-May17.pdf" caption="Summer 2017 Exam"%}
-{% file src="../.gitbook/assets/FE-May17-Sol.pdf" caption="Summer 2017 Exam Solutions"%}
-{% file src="../.gitbook/assets/FE-May17-Info.pdf" caption="Summer 2017 Exam Statistics"%}
+{% file src="../.gitbook/assets/FE-May17.pdf" caption="Summer 2017 Exam" %}
+
+{% file src="../.gitbook/assets/FE-May17-Sol.pdf" caption="Summer 2017 Exam Solutions" %}
+
+{% file src="../.gitbook/assets/FE-May17-Info.pdf" caption="Summer 2017 Exam Statistics" %}
+
