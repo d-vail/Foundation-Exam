@@ -18,7 +18,7 @@ char ** makeTVList (FILE *ifp, int numShows)
   int i;
 
   TVList = malloc(numShows * sizeof(char *));               // 2 pts
-  
+
   for(i=0; i<numShows; i++)                                 // 1 pt
   {
     fscanf(ifp, “%s”, buffer);                              // 1 pt
@@ -29,11 +29,9 @@ char ** makeTVList (FILE *ifp, int numShows)
   return TVList;                                            // 1 pt
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 char ** makeTVList (FILE *ifp, int numShows)
 {
@@ -42,7 +40,6 @@ char ** makeTVList (FILE *ifp, int numShows)
   int i;
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -70,29 +67,27 @@ int isFull(node *stack)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 int isFull(node *stack)
 {
   int count = 0;            // 1 pt initializing a counter
   node *helper = stack;
-  
+
   if (stack == NULL)        // 2 pts checking if stack is null
     return 0; 
-  
+
   while(helper != NULL)     // 2 pts iter linked list
   {
     count++;                // 1 pt incrementing counter
     helper = helper->next;  // 1 pt advancing node
   }                         // Note: can stop at 20...
-  
+
   if (count >= 20)          // 2 pts returning true iff 20 or more
     return 1; 
-  
+
   return 0;                 // 1 pt returning false if no
 
   // Note: return count >= 20; takes care of both...
@@ -115,7 +110,6 @@ int isFull(node *stack)
   return 1;                       // 2 pts
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -125,18 +119,15 @@ int isFull(node *stack)
 {% tab title="Question" %}
 #### 5 points
 
-Convert the following infix expression to postfix using a stack. Show the contents of the stack at the indicated points (1, 2, and 3) in the infix expression.
+Convert the following infix expression to postfix using a stack. Show the contents of the stack at the indicated points \(1, 2, and 3\) in the infix expression.
 
 ![](../.gitbook/assets/summer-2017-ds-a-3.png)
-
 {% endtab %}
 
 {% tab title="Solution" %}
+![](https://github.com/d-vail/Foundation-Exam/tree/2d788bd004d534e5c5ef5d3be21aa87ca2b49abf/.gitbook/assets/summer-2017-ds-a-3-sol.png.png)
 
-![](../.gitbook/assets/summer-2017-ds-a-3-sol.png.png)
-
-**_Grading: 1 point for each stack, 2 points for the whole expression (partial credit allowed.)_**
-
+_**Grading: 1 point for each stack, 2 points for the whole expression \(partial credit allowed.\)**_
 {% endtab %}
 {% endtabs %}
 

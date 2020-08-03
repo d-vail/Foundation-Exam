@@ -8,13 +8,7 @@
 {% tab title="Question" %}
 #### 5 points
 
-Suppose we have an array of structures containing information about our group for a group project. Each
-index should contain a group member’s name and phone number. The structure is shown below: names
-are stored as dynamically allocated strings and phone numbers are stored as integers. When the semester
-is over, we will delete this array. Write a function called deleteGroup that will take in this array and delete
-all the information, freeing all the memory space that the array previously took up. Your function should
-take 2 parameters: a pointer to the beginning of the array and an integer indicating the number of group
-members. It should return a null pointer representing the now empty array.
+Suppose we have an array of structures containing information about our group for a group project. Each index should contain a group member’s name and phone number. The structure is shown below: names are stored as dynamically allocated strings and phone numbers are stored as integers. When the semester is over, we will delete this array. Write a function called deleteGroup that will take in this array and delete all the information, freeing all the memory space that the array previously took up. Your function should take 2 parameters: a pointer to the beginning of the array and an integer indicating the number of group members. It should return a null pointer representing the now empty array.
 
 ```c
 typedef struct GroupMember
@@ -33,7 +27,6 @@ GroupMember* deleteGroup (GroupMember *group, int numMembers)
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 typedef struct GroupMember
 {
@@ -47,13 +40,12 @@ GroupMember* deleteGroup (GroupMember *group, int numMembers)
 
   for(i=0; i<numMembers; i++) // 1 pt
     free(group[i].name);      // 2 pts
-  
+
   free(group);                // 1 pt
-  
+
   return NULL;                // 1 pt
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -63,7 +55,7 @@ GroupMember* deleteGroup (GroupMember *group, int numMembers)
 {% tab title="Question" %}
 #### 10 points
 
-Suppose we have a linked list implemented with the structure below. Write a function that will take in a pointer to the head of a list and inserts a node storing -1 **_after_** each even value in the list. If the list is empty or there are no even values in the list, no modifications should be made to the list. (For example, if the initial list had 2, 6, 7, 1, 3, and 8, the resulting list would have 2, -1, 6, -1, 7, 1, 8, -1.)
+Suppose we have a linked list implemented with the structure below. Write a function that will take in a pointer to the head of a list and inserts a node storing -1 _**after**_ each even value in the list. If the list is empty or there are no even values in the list, no modifications should be made to the list. \(For example, if the initial list had 2, 6, 7, 1, 3, and 8, the resulting list would have 2, -1, 6, -1, 7, 1, 8, -1.\)
 
 ```c
 typedef struct node
@@ -80,7 +72,6 @@ void markEven(node *head)
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 typedef struct node
 {
@@ -96,7 +87,7 @@ void markEven(node *head)
   {
     while (tmp != NULL && tmp->data%2 != 0)   // 3 pts find next even
       tmp = tmp->next;
-    
+
     if (tmp != NULL)                          // 1 pt no null error
     {
       node* newnode = malloc(sizeof(node));
@@ -108,7 +99,6 @@ void markEven(node *head)
   }
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -118,11 +108,11 @@ void markEven(node *head)
 {% tab title="Question" %}
 #### 10 points
 
-**(a)** (6 pts) Convert the following infix expression to postfix using a stack. Show the contents of the stack at the indicated points (1, 2, and 3) in the infix expression.
+**\(a\)** \(6 pts\) Convert the following infix expression to postfix using a stack. Show the contents of the stack at the indicated points \(1, 2, and 3\) in the infix expression.
 
 ![](../.gitbook/assets/summer-2018-ds-a-3.png)
 
-**(b)** (4 pts) Whenever a recursive function is called, the function calls go onto a call stack. The depth of the call stack is the number of different recursive calls on the stack at a particular point in time, which indicates the number of different recursive calls that have started, but have not completed. What is the maximum stack depth of the call stack when the function fib(10) is executed? Is this maximum stack depth equal to the number of times the recursive function, fib, is called? Assume the implementation of the Fibonacci function shown below:
+**\(b\)** \(4 pts\) Whenever a recursive function is called, the function calls go onto a call stack. The depth of the call stack is the number of different recursive calls on the stack at a particular point in time, which indicates the number of different recursive calls that have started, but have not completed. What is the maximum stack depth of the call stack when the function fib\(10\) is executed? Is this maximum stack depth equal to the number of times the recursive function, fib, is called? Assume the implementation of the Fibonacci function shown below:
 
 ```c
 int fib(int n)
@@ -132,22 +122,19 @@ int fib(int n)
 }
 ```
 
-Maximum Stack Depth: ________
+Maximum Stack Depth: _**\_\_**_
 
-Is Max Stack Depth equal to the # of recursive calls?   YES    NO
-(Circle the correct answer.)
-
+Is Max Stack Depth equal to the \# of recursive calls? YES NO \(Circle the correct answer.\)
 {% endtab %}
 
 {% tab title="Solution" %}
-
-**(a)**
+**\(a\)**
 
 ![](../.gitbook/assets/summer-2018-ds-a-3-sol.png)
 
-**_Grading: 1 point for each stack, 3 points for the whole expression (partial credit allowed.)_**
+_**Grading: 1 point for each stack, 3 points for the whole expression \(partial credit allowed.\)**_
 
-**(b)**
+**\(b\)**
 
 ```c
 int fib(int n)
@@ -159,12 +146,11 @@ int fib(int n)
 
 Maximum Stack Depth: 10
 
-**_Grading: 2 pts for 10 or 9, 1 pt to be within 3, 0 pts otherwise_**
+_**Grading: 2 pts for 10 or 9, 1 pt to be within 3, 0 pts otherwise**_
 
-Is Max Stack Depth equal to the # of recursive calls?: NO
+Is Max Stack Depth equal to the \# of recursive calls?: NO
 
-**_Grading: 2 pts correct, 0 otherwise_**
-
+_**Grading: 2 pts correct, 0 otherwise**_
 {% endtab %}
 {% endtabs %}
 

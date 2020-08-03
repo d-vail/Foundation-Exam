@@ -8,7 +8,7 @@
 {% tab title="Question" %}
 #### 10 points
 
-A catalogue of _apps_ and their price is stored in a text file. Each line of the file contains the name of an app (1-19 letters) followed by its price with a space in between. Write a function called `makeAppArray` that reads the _app information_ from the file and stores it in an array of app pointers. Your function should take 2 parameters: a pointer to the file containing the app information and an integer indicating the number of **_apps_** in the file. It should return a pointer to the array of **_apps_**. An **_app_** is stored in a struct as follows:
+A catalogue of _apps_ and their price is stored in a text file. Each line of the file contains the name of an app \(1-19 letters\) followed by its price with a space in between. Write a function called `makeAppArray` that reads the _app information_ from the file and stores it in an array of app pointers. Your function should take 2 parameters: a pointer to the file containing the app information and an integer indicating the number of _**apps**_ in the file. It should return a pointer to the array of _**apps**_. An _**app**_ is stored in a struct as follows:
 
 ```c
 typedef struct
@@ -29,13 +29,12 @@ app** makeAppArray(FILE* fp, int numApps)
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 app** makeAppArray(FILE* fp, int numApps)
 {
   app** appArray = (app**)malloc(numApps * sizeof(app*)); // 3 pts
   int i;
-  
+
   for(i=0; i < numApps; i++)
   {
     appArray[i] = (app*)malloc(sizeof(app));              // 2 pts
@@ -47,8 +46,7 @@ app** makeAppArray(FILE* fp, int numApps)
 }
 ```
 
-**_Grading notes: the casts aren't necessary, no points off for forgetting to declare i, no points off if only one percent code is wrong, 1 pt off if both percent codes are wrong, take only 1 pt off total if the syntax for reading from a file is incorrect, take off only 1 pt total if they use a dot instead of an array, they can order these statements differently - they can allocate ALL of the space before reading anything in._**
-
+_**Grading notes: the casts aren't necessary, no points off for forgetting to declare i, no points off if only one percent code is wrong, 1 pt off if both percent codes are wrong, take only 1 pt off total if the syntax for reading from a file is incorrect, take off only 1 pt total if they use a dot instead of an array, they can order these statements differently - they can allocate ALL of the space before reading anything in.**_
 {% endtab %}
 {% endtabs %}
 
@@ -58,7 +56,7 @@ app** makeAppArray(FILE* fp, int numApps)
 {% tab title="Question" %}
 #### 5 points
 
-Consider the following function that takes in as a parameter a pointer to the front of a linked list(list) and the number of items in the list(size). **_node_** is defined as follows:
+Consider the following function that takes in as a parameter a pointer to the front of a linked list\(list\) and the number of items in the list\(size\). _**node**_ is defined as follows:
 
 ```c
 typedef struct node
@@ -98,20 +96,17 @@ If `mystery(head, 7)`, is called, where head is shown below, what will the funct
 
 Adjusted List:
 
-Return Value: _____
-
+Return Value: **\_**
 {% endtab %}
 
 {% tab title="Solution" %}
-
 Adjusted List:
 
 ![](../.gitbook/assets/spring-2017-ds-a-2-sol.png)
 
 Return Value: 5
 
-**_Grading: 2 pts return value (all or nothing), 3 pts list, give partial for list as you see fit._**
-
+_**Grading: 2 pts return value \(all or nothing\), 3 pts list, give partial for list as you see fit.**_
 {% endtab %}
 {% endtabs %}
 
@@ -121,7 +116,7 @@ Return Value: 5
 {% tab title="Question" %}
 #### 10 points
 
-A queue is implemented as an array. The queue has the 2 attributes, front and size. front is the index in the array where the next element to be removed from the queue can be found, if the queue is non-empty. (If the queue is empty, front may be any valid array index from 0 to 19.) size is the total number of elements currently in the queue. For efficient use of resources, elements can be added to the queue not just at the end of the array but also in the indices at the beginning of the array before front. Such a queue is called a circular queue. A circular queue has the following structure:
+A queue is implemented as an array. The queue has the 2 attributes, front and size. front is the index in the array where the next element to be removed from the queue can be found, if the queue is non-empty. \(If the queue is empty, front may be any valid array index from 0 to 19.\) size is the total number of elements currently in the queue. For efficient use of resources, elements can be added to the queue not just at the end of the array but also in the indices at the beginning of the array before front. Such a queue is called a circular queue. A circular queue has the following structure:
 
 ```c
 typedef struct
@@ -142,13 +137,12 @@ int enqueue(cQueue* thisQ, int item)
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 int enqueue(cQueue* thisQ, int item)
 {
   if (thisQ->size == 20)                                  // 2 pts
     return 0;                                             // 1 pt
-  
+
   // 5 pts: 1 values, 3 pts index, 1 pt item
   thisQ->values[(thisQ->front+thisQ->size)%20] = item;
 
@@ -157,8 +151,7 @@ int enqueue(cQueue* thisQ, int item)
 }
 ```
 
-**_Grading notes: If they forget thisQ-> each time, take off 2 pts total._**
-
+_**Grading notes: If they forget thisQ-&gt; each time, take off 2 pts total.**_
 {% endtab %}
 {% endtabs %}
 

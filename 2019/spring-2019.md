@@ -27,7 +27,7 @@ Employee *makeArray(char **firstNames, char **lastNames, int *IDs, int n)
 {
   int i;
   Employee *array = malloc(__________________________);
-  
+
   for (i = 0; i < n; i++)
   {
     array[i].first = malloc(__________________________);
@@ -42,8 +42,7 @@ Employee *makeArray(char **firstNames, char **lastNames, int *IDs, int n)
 ```
 
 1. Fill in the blanks above with the appropriate arguments for each `malloc()` statement.
-
-1. Next, write a function that takes a pointer to the array created by the `makeArray()` function, along with the number of employee records in that array (_n_) and frees all the dynamically allocated memory associated with that array. The function signature is as follows:
+2. Next, write a function that takes a pointer to the array created by the `makeArray()` function, along with the number of employee records in that array \(_n_\) and frees all the dynamically allocated memory associated with that array. The function signature is as follows:
 
 ```c
 void freeEmployeeArray(Employee *array, int n)
@@ -51,17 +50,15 @@ void freeEmployeeArray(Employee *array, int n)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 Employee *makeArray(char **firstNames, char **lastNames, int *IDs, int n)
 {
   int i;
   Employee *array = malloc(sizeof(Employee) * n);         // 1 pt
-  
+
   for (i = 0; i < n; i++)
   {
     // The following blanks are worth 2 points EACH. Award 1 point each if close. Note that
@@ -89,7 +86,6 @@ void freeEmployeeArray(Employee *array, int n)
   free(array);              // 1 point for this free() statement
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -127,25 +123,23 @@ void doTheThing(node *head, node *current)
 Draw a linked list that simultaneously satisfies both of the following properties:
 
 1. The linked list has **exactly four nodes**. Be sure to indicate the integer value contained in each node.
-1. If the linked list were passed to the function above, the program would either crash with a segmentation fault, get stuck in an infinite loop, or crash as a result of a stack overflow (infinite recursion).
+2. If the linked list were passed to the function above, the program would either crash with a segmentation fault, get stuck in an infinite loop, or crash as a result of a stack overflow \(infinite recursion\).
 
 **Note**: When this function is first called, the head of your linked list will be passed as both arguments to the function, like so:
 
 ```c
-doTheThing(head, head); 
+doTheThing(head, head);
 ```
 
 **Hint**: Notice that all the recursive calls always pass head as the first parameter. So, within this function, head will always refer to the actual head of the linked list. The second parameter is the only one that ever changes.
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 The only way to get wrecked with this code is to trigger the `doTheThing(head, head->next)` call. Since we only trigger that call when `current == head->next` , then making that recursive call results in infinite recursion.
 
-That specific recursive call is only executed when `current == head->next` (i.e., when current is the second node in the linked list) and when that second node has a value that is 10 greater than the value in the third node. For example:
+That specific recursive call is only executed when `current == head->next` \(i.e., when current is the second node in the linked list\) and when that second node has a value that is 10 greater than the value in the third node. For example:
 
-```
+```text
 [1]->[18]->[8]->[3]->
 
 * The first and last values can be anything, but the second value needs to be exactly 10 greater than the third value.
@@ -153,15 +147,11 @@ That specific recursive call is only executed when `current == head->next` (i.e.
 
 Note that none of the excessive `->next->next->next` accesses would ever cause segfaults here, since we always have four nodes in the linked list, and we never get to those accesses unless _current_ is the second node in the linked list. Even the `head->next->next->next->next` access wouldn’t cause a segfault; it would just pass NULL to the function recursively, which would hit a base case and return gracefully.
 
-**_Grading:_**
+_**Grading:**_
 
-**10 points** for a correct answer. Note: If the 2 nd node has a value 10 less than the 3 rd node, still award 10/10.
-**5 points** if the 2 nd node has a value 1 greater than the 3 rd node, thereby triggering the `head->next- >next->next->next` access. That doesn’t cause a segfault, but it’s an understandable mistake and is the next best thing. Note: If the 2 nd node has a value 1 less than the 3 rd node, still award 5/10.
-**2 points** otherwise, as long as they draw a linked list with exactly four nodes, and each node contains an integer. (Also, any circular list with 4 nodes gets 2 points maximum.)
-**0 points** otherwise.
+**10 points** for a correct answer. Note: If the 2 nd node has a value 10 less than the 3 rd node, still award 10/10. **5 points** if the 2 nd node has a value 1 greater than the 3 rd node, thereby triggering the `head->next- >next->next->next` access. That doesn’t cause a segfault, but it’s an understandable mistake and is the next best thing. Note: If the 2 nd node has a value 1 less than the 3 rd node, still award 5/10. **2 points** otherwise, as long as they draw a linked list with exactly four nodes, and each node contains an integer. \(Also, any circular list with 4 nodes gets 2 points maximum.\) **0 points** otherwise.
 
-**_FURTHER GRADING NOTES: A circular list should get at most 2 points. It's clear from the question that the intent is for the list not to be circular but a regular linked list. The reason this is clear is that the way the code is written, we look for the base case with a NULL pointer, but a circular linked list doesn't have one of those. So, ANY circular linked list of size 4 will cause an infinite loop, so one can put any four values down and the second item would be satisfied, which means the second item would be irrelevant. This should help a student realize that the intent was for the answer to be a regular linked list that isn't circular and what's being graded are the specific values they pick for the four nodes. When people refer to a regular linked list, they just say "linked list", they don't say "a linked list that isn't circular and doesn't have links." Instead, the assumption is that unless specified otherwise, a linked list has a head and a single pointer to the next node._**
-
+_**FURTHER GRADING NOTES: A circular list should get at most 2 points. It's clear from the question that the intent is for the list not to be circular but a regular linked list. The reason this is clear is that the way the code is written, we look for the base case with a NULL pointer, but a circular linked list doesn't have one of those. So, ANY circular linked list of size 4 will cause an infinite loop, so one can put any four values down and the second item would be satisfied, which means the second item would be irrelevant. This should help a student realize that the intent was for the answer to be a regular linked list that isn't circular and what's being graded are the specific values they pick for the four nodes. When people refer to a regular linked list, they just say "linked list", they don't say "a linked list that isn't circular and doesn't have links." Instead, the assumption is that unless specified otherwise, a linked list has a head and a single pointer to the next node.**_
 {% endtab %}
 {% endtabs %}
 
@@ -182,23 +172,23 @@ void doTheThing(void)
   Stack *s1 = createStack();
   Stack *s2 = createStack();
   Queue *q = createQueue();
-  
+
   for (i = 0; i < n; i++)
     push(s1, array[i]);
-  
+
   while (!isEmptyStack(s1))
   {
     while (!isEmptyStack(s1))
       enqueue(q, pop(s1));  // pop element from s1 and enqueue it in q
     while (!isEmptyQueue(q))
       push(s2, dequeue(q)); // dequeue from q and push onto s2
-    
+
     printf("%d ", pop(s2)); // pop from s2 and print element
-    
+
     while (!isEmptyStack(s2))
       push(s1, pop(s2));    // pop from s2 and push onto s1
   }
-  
+
   printf("Tada!\n");
 
   freeStack(s1);
@@ -207,22 +197,15 @@ void doTheThing(void)
 }
 ```
 
-What will be the exact output of the function above? (You may assume the existence of all functions written in the code, such as createStack(), createQueue(), push(), pop(), and so on.)
-
+What will be the exact output of the function above? \(You may assume the existence of all functions written in the code, such as createStack\(\), createQueue\(\), push\(\), pop\(\), and so on.\)
 {% endtab %}
 
 {% tab title="Solution" %}
+_**Solution:**_ 3 18 58 23 12 31 19 26 3 Tada! \(This function just ends up printing the contents of the array in order.\)
 
-**_Solution:_** 3 18 58 23 12 31 19 26 3 Tada! (This function just ends up printing the contents of the array in order.)
-
-**_Grading:_**
-**5 points** for the correct output
-**4 points** if their output was simply missing the “Tada!” or if their output was off by one value
-**2 points** if they printed the array in reverse order.
-**0 points** otherwise.
+_**Grading:**_ **5 points** for the correct output **4 points** if their output was simply missing the “Tada!” or if their output was off by one value **2 points** if they printed the array in reverse order. **0 points** otherwise.
 
 Feel free to award partial credit if you encounter something else that seems reasonable.
-
 {% endtab %}
 {% endtabs %}
 
