@@ -104,7 +104,12 @@
 * [ ] [Summer 2019, Data Structures A 3](2019/summer-2019.md#a-3-stacks)
 * [ ] [Spring 2019, Data Structures A 3](2019/spring-2019.md#a-3-stacks-and-queues)
 * [ ] [Fall 2018, Data Structures A 3](2018/fall-2018.md#a-3-stacks-queues)
-* [ ] Summer 2018, Data Structures A 3
+* [ ] [Summer 2018, Data Structures A 3](2018/summer-2018.md#a-3-stacks)
+* [ ] [Spring 2018, Data Structures A 3](2018/spring-2018.md#a-3-stacks)
+* [ ] [Fall 2017, Data Structures A 3](2017/fall-2017.md#a-3-stacks)
+* [ ] [Summer 2017, Data Structures A 3](2017/summer-2017.md#a-3-stacks)
+* [ ] [Spring 2017, Data Structures A 3](2017/spring-2017.md#a-3-queues)
+* [ ] [Fall 2016, Data Structures A 3](2016/fall-2016.md#a-3-stacks-infix-to-postfix-conversion)
 
 ### Tries
 
