@@ -11,13 +11,12 @@
 This problem relies on the following struct definition:
 
 ```c
-typedef struct
+typedef struct Employee
 {
   char *first;  // Employee's first name.
   char *last;   // Employee's last name.
   int ID;       // Employee ID.
 } Employee;
-Employee
 ```
 
 Consider the following function, which takes three arrays – each of length _n_ – containing the first names, last names, and ID numbers of _n_ employees for some company. The function dynamically allocates an array of _n_ Employee structs, copies the information from the array arguments into the corresponding array of structs, and returns the dynamically allocated array.
