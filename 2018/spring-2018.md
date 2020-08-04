@@ -104,7 +104,7 @@ node* eFunction(node* aNode)
 
 **\(b\)** \(2 pts\) What does the function eFunction do, in general to the list pointed to by its formal parameter, aNode?
 
-**\(c\)** \(2 pts\) What important task does line 12 perform?
+**\(c\)** \(2 pts\) What important task does line 14 perform?
 {% endtab %}
 
 {% tab title="Solution" %}
