@@ -16,17 +16,6 @@ char ** makeTVList (FILE *ifp, int numShows)
   char buffer[128];
   char **TVList = NULL;
   int i;
-
-  TVList = malloc(numShows * sizeof(char *));               // 2 pts
-
-  for(i=0; i<numShows; i++)                                 // 1 pt
-  {
-    fscanf(ifp, “%s”, buffer);                              // 1 pt
-    TVList[i] = malloc((strlen(buffer)+1)*(sizeof(char)));  // 3 pts
-    strcpy(TVList[i], buffer);                              // 2 pts
-  }
-
-  return TVList;                                            // 1 pt
 }
 ```
 {% endtab %}
@@ -38,6 +27,17 @@ char ** makeTVList (FILE *ifp, int numShows)
   char buffer[128];
   char **TVList = NULL;
   int i;
+
+  TVList = malloc(numShows * sizeof(char *));               // 2 pts
+
+  for(i=0; i<numShows; i++)                                 // 1 pt
+  {
+    fscanf(ifp, “%s”, buffer);                              // 1 pt
+    TVList[i] = malloc((strlen(buffer)+1)*(sizeof(char)));  // 3 pts
+    strcpy(TVList[i], buffer);                              // 2 pts
+  }
+
+  return TVList;                                            // 1 pt
 }
 ```
 {% endtab %}
