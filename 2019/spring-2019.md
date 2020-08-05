@@ -234,22 +234,9 @@ typedef struct node
 
 void print_postorder(node *root)
 {
-  if (root == NULL)
-    return;
-
-  postorder(root->left);
-  postorder(root->right);
-  printf("%d ", root->data);
+  // your code
 }
 ```
-
-**Grading**
-
-* **+1 point** for correct base case
-* **+1 point** for making both recursive calls \(regardless of order\)
-* **+1 point** for printing root-&gt;data \(regardless of order\)
-* **+1 point** for having both recursive calls, printing root-&gt;data, and doing all those things in the correct order.
-* **+1 point** for getting all the syntax correct. \(So, for example, if they called postorder\(root left\) and postorder\(root.right\), they can get the 1 point for making both recursive calls, but they lose this 1 point for using the dot instead of the arrow.\)
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -263,9 +250,22 @@ typedef struct node
 
 void print_postorder(node *root)
 {
-  // your code
+  if (root == NULL)
+  	return;
+  
+  print_postorder(root->left);
+  print_postorder(root->right);
+  printf("%d ", root->data);
 }
 ```
+
+**Grading**
+
+* **+1 point** for correct base case
+* **+1 point** for making both recursive calls \(regardless of order\)
+* **+1 point** for printing root-&gt;data \(regardless of order\)
+* **+1 point** for having both recursive calls, printing root-&gt;data, and doing all those things in the correct order.
+* **+1 point** for getting all the syntax correct. \(So, for example, if they called postorder\(root left\) and postorder\(root.right\), they can get the 1 point for making both recursive calls, but they lose this 1 point for using the dot instead of the arrow.\)
 {% endtab %}
 {% endtabs %}
 
