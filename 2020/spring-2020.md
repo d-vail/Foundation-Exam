@@ -264,8 +264,6 @@ Note: The length of the hash table is **10**.
 {% endtab %}
 {% endtabs %}
 
-
-
 ### B 3: Tries
 
 {% tabs %}
@@ -286,7 +284,7 @@ typedef struct TrieNode
 
 int numWordsWithPrefix(TrieNode* root, char* prefix)
 {
-    // your codes
+    // your code
 }
 ```
 {% endtab %}
@@ -360,7 +358,7 @@ _**Grading: 2 pts for each answer, 1 pt for all of the explanation.**_
 {% tab title="Question" %}
 #### 10 points
 
-A backtracking solution took O\(n\(k n \)\) time where n is the number of decisions, and k was the number of options for each decision. With n of 20 and k of 1 the time it took was approximately 10 seconds. What is the expected time required for an input of 10 decisions \(n=10\) where each decision has 2 options \(k=2\) in **seconds**?
+A backtracking solution took $$O(n(k^n))$$ time where n is the number of decisions, and k was the number of options for each decision. With n of 20 and k of 1 the time it took was approximately 10 seconds. What is the expected time required for an input of 10 decisions \(n=10\) where each decision has 2 options \(k=2\) in **seconds**?
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -377,8 +375,7 @@ $$
 To solve for the question we plug in n=10 and k=2.
 
 $$
-Answer = (. 5s)10(2 10 )
-\\
+Answer = (. 5s)10(2^{10} ) = (. 5s)(1024) = 5120s
 $$
 
 _**Grading: Find c, 4 pts. Plugging in 10 and 2, 4 pts. Correct answer, 2 pts.**_

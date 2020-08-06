@@ -336,7 +336,7 @@ Let the algorithm with input array size n have runtime $\(n\) = c√n$ , where c
 Using the given information, we have:
 
 $$
-T(10 6 ) = c \sqrt{10^6} = 125ms
+T(10^6 ) = c \sqrt{10^6} = 125ms
 \\
 c(1000) = 125ms
 \\
@@ -363,7 +363,7 @@ _**Grading: 2 pts solving for c, 2 pts for plugging 64,000,000 and canceling to 
 {% tab title="Question" %}
 #### 10 points
 
-Recall that $\sum\_{i = 0}^{n - 1} = 2^i = 2^n - 1$
+Recall that $$\sum_{i = 0}^{n - 1} = 2^i = 2^n - 1$$
 
 Use the iteration technique to find a Big-Oh bound for the recurrence relation below. Note: you may find 2 i the following mathematical results helpful: $2^{\log_3 n} = n^{\log\_3 2}$, and $\sum_{i = 0}^\infin \(\frac{2}{3}\)^i = 3$ . You may use these without proof in your work below.
 

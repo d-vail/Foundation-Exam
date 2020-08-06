@@ -234,6 +234,14 @@ _**Grading: 1 pt for each drawing, 2 pts for correct array, 1 pt for minor error
 {% tab title="Question" %}
 #### 10 points
 
+\(a\) \(8 pts\) Create an AVL tree by inserting the following values into an initially empty AVL Tree in the order given: 7, 8, 54, 13, 35, 66, 50, and 12. Show the state of the tree after each insertion.
+
+\(b\) \(2 pts\) Draw the state of the tree after the deletion of the node containing the value 7.
+{% endtab %}
+
+{% tab title="Solution" %}
+#### 10 points
+
 **\(a\)**
 
 ![](../.gitbook/assets/summer-2018-ds-b-3-sol-a.png)
@@ -247,10 +255,6 @@ _**Grading: Students should show each insertion step for 1 pt each. Imbalances s
 Deleting 7 creates an imbalance at 8 that must be corrected.
 
 _**Grading: 1 pt for a valid BST without 7, 1 pt for it being the correct BST without 7 \(0 pts if either 7 is still in it or it's not a valid BST.\)**_
-{% endtab %}
-
-{% tab title="Solution" %}
-
 {% endtab %}
 {% endtabs %}
 
