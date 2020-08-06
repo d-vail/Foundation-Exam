@@ -217,6 +217,8 @@ Insert 109 Step 1:
 Insert 109 Step 2:
 
 Insert 109 Step 3:
+
+![](../.gitbook/assets/summer-2018-ds-b-2-b.png)
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -225,8 +227,6 @@ Insert 109 Step 3:
 _**Grading: 1 pt for each drawing, 2 pts for correct array, 1 pt for minor error in the array, 0 pt for major error in array.**_
 {% endtab %}
 {% endtabs %}
-
-
 
 ### B 3: AVL Trees
 
