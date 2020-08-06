@@ -206,7 +206,11 @@ int countBefore(bsNode* root, char target[])
 
 **\(b\)** \(2 pts\) If the following students have the grades shown, and your hash function given in \(a\) is used, draw the state of the hash map after these 3 entries are inserted into the table. \(Note: No need to show all 25 array slots, just clearly label the index and contents of each of the non-empty array slots.\)
 
-**Mary 60** **Ben 75** **Dona 13**
+**Mary 60**
+
+**Ben 75**
+
+**Dona 13**
 {% endtab %}
 
 {% tab title="Solution" %}
