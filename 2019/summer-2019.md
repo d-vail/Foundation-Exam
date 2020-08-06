@@ -209,7 +209,7 @@ _**Grading: 1 pt per correct number in the correct slot.**_
 {% tab title="Question" %}
 #### 5 points
 
-Insert the following numbers \(in the order that they are shown from left to right\) into a hash table with an array of size 10, using the hash function, $H\(x\) = x\mod{10}$.
+Insert the following numbers \(in the order that they are shown from left to right\) into a hash table with an array of size 10, using the hash function, $$H(x) = x\mod10$$ .
 
 234, 344, 483, 564, 814
 

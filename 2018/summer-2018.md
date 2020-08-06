@@ -208,6 +208,8 @@ int countDiv(bstNode *root, int value)
 {% tab title="Question" %}
 #### 5 points
 
+Suppose we are storing integers in a **Max-Heap** using the tree representation of heaps. The following tree shows the Max-Heap after 5 insertions. Show the result of inserting 109 into this heap, showing each step of the process. \(Hint: You should draw 3 separate tree pictures.\) Then, place each value from the resulting heap of 6 values into the array in the appropriate indexes corresponding to how a heap is typically stored in an array.
+
 ![](../.gitbook/assets/summer-2018-ds-b-2.png)
 
 Insert 109 Step 1:
@@ -215,8 +217,6 @@ Insert 109 Step 1:
 Insert 109 Step 2:
 
 Insert 109 Step 3:
-
-![](../.gitbook/assets/summer-2018-ds-b-2-b.png)
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -225,6 +225,8 @@ Insert 109 Step 3:
 _**Grading: 1 pt for each drawing, 2 pts for correct array, 1 pt for minor error in the array, 0 pt for major error in array.**_
 {% endtab %}
 {% endtabs %}
+
+
 
 ### B 3: AVL Trees
 
