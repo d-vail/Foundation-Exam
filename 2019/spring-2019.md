@@ -251,8 +251,8 @@ typedef struct node
 void print_postorder(node *root)
 {
   if (root == NULL)
-  	return;
-  
+      return;
+
   print_postorder(root->left);
   print_postorder(root->right);
   printf("%d ", root->data);
@@ -413,10 +413,9 @@ Solution: O\(n\)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
 
-Mathematically, given a function f, we recursively define $$f^k (n)$$ as follows: if k = 1, $$f^1 (n) = f(n)$$. Otherwise, for k > 1, $$f^k (n) = f(f^{k-1}(n))$$. Assume that a function, f, which takes in a single integer and returns an integer already exists. Write a recursive function fcomp, which takes in both n and k (k > 0), and returns $$f^k (n)$$.
+Mathematically, given a function f, we recursively define $$f^k (n)$$ as follows: if k = 1, $$f^1 (n) = f(n)$$. Otherwise, for k &gt; 1, $$f^k (n) = f(f^{k-1}(n))$$. Assume that a function, f, which takes in a single integer and returns an integer already exists. Write a recursive function fcomp, which takes in both n and k \(k &gt; 0\), and returns $$f^k (n)$$.
 
 ```c
 int f(int n);
@@ -425,11 +424,9 @@ int fcomp(int n, int k)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 Solution 1
 
 ```c
@@ -453,9 +450,9 @@ int fcomp(int n, int k)
 ```
 
 **Grading**:
-- 2 pts for the base case.
-- 3 pts for the recursive case.
 
+* 2 pts for the base case.
+* 3 pts for the recursive case.
 {% endtab %}
 {% endtabs %}
 
@@ -463,14 +460,13 @@ int fcomp(int n, int k)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-(a) (5 pts) Consider using Merge Sort to sort the array shown below. What would the state of the array be right before the **_last_** call to the Merge function occurs?
+\(a\) \(5 pts\) Consider using Merge Sort to sort the array shown below. What would the state of the array be right before the _**last**_ call to the Merge function occurs?
 
 ![](../.gitbook/assets/spring-2019-aa-b-2.png)
 
-(b) (5 pts) An inversion in an array, `arr`, is a distinct pair of values `i` and `j`, such that `i < j` and `arr[i] > arr[j]`. The function below is attempting to count the number of inversions in its input array, `arr`, of size `n`. Unfortunately, there is a bug in the program. Given that the array passed to the function has all distinct values, what will the function always return (no matter the order of values in the input array), in terms of n? Also, suggest a quick fix so that the function runs properly. (Note: analyzing inversions is important to studying sorting algorithm run times.)
+\(b\) \(5 pts\) An inversion in an array, `arr`, is a distinct pair of values `i` and `j`, such that `i < j` and `arr[i] > arr[j]`. The function below is attempting to count the number of inversions in its input array, `arr`, of size `n`. Unfortunately, there is a bug in the program. Given that the array passed to the function has all distinct values, what will the function always return \(no matter the order of values in the input array\), in terms of n? Also, suggest a quick fix so that the function runs properly. \(Note: analyzing inversions is important to studying sorting algorithm run times.\)
 
 ```c
 1. int countInversions(int arr[], int n) {
@@ -484,30 +480,24 @@ int fcomp(int n, int k)
 9.   return res;
 10.}
 ```
-Return value of the function in terms of n: 
-Line number to change to fix the function: 
-Line of code to replace that line: 
 
+Return value of the function in terms of n: Line number to change to fix the function: Line of code to replace that line:
 {% endtab %}
 
 {% tab title="Solution" %}
-
-(a)
+\(a\)
 
 ![](../.gitbook/assets/spring-2019-aa-b-2-sol.png)
 
-**_Grading: 5 pts for the correct answer, 2 pts if each pair is sorted, 1 pt if the whole array is sorted, otherwise, count how many of the blanks are correct and divide by 2, rounding down._**
+_**Grading: 5 pts for the correct answer, 2 pts if each pair is sorted, 1 pt if the whole array is sorted, otherwise, count how many of the blanks are correct and divide by 2, rounding down.**_
 
-(b)
+\(b\)
 
-Return value of the function in terms of n: $$\frac{n(n-1)}{2}$$, the sum of the first n-1 non-negative integers.
-Line number to change to fix the function: 4
-Line of code to replace that line: `for (j = i+1; j < n; j++) {`
+Return value of the function in terms of n: $$\frac{n(n-1)}{2}$$, the sum of the first n-1 non-negative integers. Line number to change to fix the function: 4 Line of code to replace that line: `for (j = i+1; j < n; j++) {`
 
-As it’s currently written, the code compares each value arr[i] to all other values in the array and adds 1 to res each time arr[i] is bigger. So, for the largest value in the array n-1 is added to res, for the second largest value in the array n-2 is added, and so forth, so res will simply be the sum of the integers from 0 to n-1. The issue with the code is that it doesn’t enforce the restriction i < j given in the definition of an inversion. To enforce this, we force j > i by making j’s starting value i+1, the smallest integer greater than j.
+As it’s currently written, the code compares each value arr\[i\] to all other values in the array and adds 1 to res each time arr\[i\] is bigger. So, for the largest value in the array n-1 is added to res, for the second largest value in the array n-2 is added, and so forth, so res will simply be the sum of the integers from 0 to n-1. The issue with the code is that it doesn’t enforce the restriction i &lt; j given in the definition of an inversion. To enforce this, we force j &gt; i by making j’s starting value i+1, the smallest integer greater than j.
 
-**_Grading: 2 pts return value, 1 pt line to change, 2 pts for the change._**
-
+_**Grading: 2 pts return value, 1 pt line to change, 2 pts for the change.**_
 {% endtab %}
 {% endtabs %}
 
@@ -515,7 +505,6 @@ As it’s currently written, the code compares each value arr[i] to all other va
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
 In this problem we will consider buying a collection of 20 figurines, labeled 0 through 19, inclusive. The figurines come in packages. Each package has some non-empty subset of figurines. We can represent the contents of a single package using an integer in between 1 and 2^20 – 1, inclusive, where the bits that are on represent which figurines are in the package. For example, the integer 22 = 2^4 + 2^2 + 2^1 , would represent a package with figurines 1, 2 and 4. Each month, one package comes out. You greedily buy every package until you have all 20 figurines. Write a function that takes in an array of integers, `packages`, and its length, `n`, where `packages[i]` stores an integer representing the contents of the package on sale during month i, and returns the number of months you will have to buy packages to complete the set. It is guaranteed that each figurine belongs to at least one of the packages and that each value in the array packages is in between 1 and 2^20 -1, inclusive. **For full credit, you must use bitwise operators.**
@@ -526,12 +515,9 @@ int monthsTillComplete(int packages[], int n) {
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
-
 ```c
 int monthsTillComplete(int packages[], int n) {
 {
@@ -546,10 +532,9 @@ int monthsTillComplete(int packages[], int n) {
 }
 ```
 
-**_Grading: 1 pt using an integer to keep track of current items, 4 pts looping until all items are collected (bitshift not necessary, but easier), 4 pts to update current collection (3 pts if no bitwise operator is used), 1 pt increment i, 1 pt return appropriate value._**
+_**Grading: 1 pt using an integer to keep track of current items, 4 pts looping until all items are collected \(bitshift not necessary, but easier\), 4 pts to update current collection \(3 pts if no bitwise operator is used\), 1 pt increment i, 1 pt return appropriate value.**_
 
 **Max grade for solving correctly with no bitwise operators is 8 out of 10.**
-
 {% endtab %}
 {% endtabs %}
 

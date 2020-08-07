@@ -300,10 +300,9 @@ _**Grading: 1 pt for a valid BST without 7, 1 pt for it being the correct BST wi
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-Consider writing a recursive method that raises a polynomial to an exponent, calculating each of its coefficients mod a given integer. One way this method could work is checking to see if the exponent is even. If so, raise the polynomial to half of the original power. Then, take that result (a polynomial) and multiply it by itself for the result. If the original exponent, exp, was odd, then we could simply first raise the polynomial to exp-1, and then take that result and multiply it by the original polynomial. Implement this algorithm recursively below. You are given the code for the multiply function and should call it accordingly. A polynomial is stored as an array of integers, where poly[i] is the coefficient to x i . In the function signature, len is the length of the array poly, so poly is of degree len-1, exp is the exponent to which we are raising the polynomial and mod is the modulus by which we are calculating each coefficient.
+Consider writing a recursive method that raises a polynomial to an exponent, calculating each of its coefficients mod a given integer. One way this method could work is checking to see if the exponent is even. If so, raise the polynomial to half of the original power. Then, take that result \(a polynomial\) and multiply it by itself for the result. If the original exponent, exp, was odd, then we could simply first raise the polynomial to exp-1, and then take that result and multiply it by the original polynomial. Implement this algorithm recursively below. You are given the code for the multiply function and should call it accordingly. A polynomial is stored as an array of integers, where poly\[i\] is the coefficient to x i . In the function signature, len is the length of the array poly, so poly is of degree len-1, exp is the exponent to which we are raising the polynomial and mod is the modulus by which we are calculating each coefficient.
 
 ```c
 int* power(int* poly, int len, int exp, int mod) {
@@ -331,7 +330,7 @@ int* power(int* poly, int len, int exp, int mod) {
   int* tmp = power(poly, ________, __________, mod);
   int* prod = multiply(_____, _________________________________,
                        poly, len, mod);
-  
+
   free(tmp);
   return prod;
 }
@@ -345,11 +344,9 @@ int* multiply(int* poly1, int len1, int* poly2, int len2, int mod) {
   return res;
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 int* power(int* poly, int len, int exp, int mod) {
   if (exp == 0) {
@@ -374,7 +371,7 @@ int* power(int* poly, int len, int exp, int mod) {
 
   int* tmp = power(poly, len, exp-1, mod);
   int* prod = multiply(tmp, (len-1)*(exp-1)+1, poly, len, mod);
-  
+
   free(tmp);
   return prod;
 }
@@ -389,8 +386,7 @@ int* multiply(int* poly1, int len1, int* poly2, int len2, int mod) {
 }
 ```
 
-**_Grading: 1 pt per slot, all or nothing per slot._**
-
+_**Grading: 1 pt per slot, all or nothing per slot.**_
 {% endtab %}
 {% endtabs %}
 
@@ -398,10 +394,9 @@ int* multiply(int* poly1, int len1, int* poly2, int len2, int mod) {
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-Consider sorting students, where each student has a first name, last name and a unique ID number. Assume all names contain uppercase letters only, so that strcmp does an alphabetic comparison for the purposes of this problem. Complete the code below so that it sorts students by last name (A to Z), breaking ties by first name (A to Z), and finally breaking ties between students with identical first and last names by ID number (smallest to largest). For example, if we have the students (EMILIO SANCHEZ 17), (ANDREA SANCHEZ 22), and (EMILIO SANCHEZ 10), the correct ordering would be ANDREA SANCHEZ, followed by EMILIO SANCHEZ 10, with EMILIO SANCHEZ 17 last.
+Consider sorting students, where each student has a first name, last name and a unique ID number. Assume all names contain uppercase letters only, so that strcmp does an alphabetic comparison for the purposes of this problem. Complete the code below so that it sorts students by last name \(A to Z\), breaking ties by first name \(A to Z\), and finally breaking ties between students with identical first and last names by ID number \(smallest to largest\). For example, if we have the students \(EMILIO SANCHEZ 17\), \(ANDREA SANCHEZ 22\), and \(EMILIO SANCHEZ 10\), the correct ordering would be ANDREA SANCHEZ, followed by EMILIO SANCHEZ 10, with EMILIO SANCHEZ 17 last.
 
 ```c
 typedef struct student {
@@ -412,7 +407,7 @@ typedef struct student {
 
 void sort(student** list, int len) {
   int i,j;
-  
+
   for (i=len-1; i>0; i--) {
     for (j=0; j<i; j++) {
       if (cmp(list[j], list[j+1]) > 0) {
@@ -429,11 +424,9 @@ int cmp(student* a, student* b)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 int cmp(student* a, student* b)
 {
@@ -447,8 +440,7 @@ int cmp(student* a, student* b)
 }
 ```
 
-**_Grading: 3 pts for breaking ties properly by last name, 3 pts for breaking ties properly by first name, 4 pts for breaking ties by ID. If no string functions are used but the logic is correct via regular relational operators, then take off 4 pts total for not properly calling the functions._**
-
+_**Grading: 3 pts for breaking ties properly by last name, 3 pts for breaking ties properly by first name, 4 pts for breaking ties by ID. If no string functions are used but the logic is correct via regular relational operators, then take off 4 pts total for not properly calling the functions.**_
 {% endtab %}
 {% endtabs %}
 
@@ -456,7 +448,6 @@ int cmp(student* a, student* b)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
 
 What is the output of the following program?
@@ -476,19 +467,12 @@ int main() {
   return 0;
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
+2 4 16 32 128
 
-2
-4
-16
-32
-128
-
-**_Grading: 1 pt per correct number listed. 1 pt off per extra number listed, cap at 0._**
-
+_**Grading: 1 pt per correct number listed. 1 pt off per extra number listed, cap at 0.**_
 {% endtab %}
 {% endtabs %}
 

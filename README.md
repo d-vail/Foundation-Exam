@@ -26,6 +26,10 @@
 
 * [ ] [Fall 2019, Algorithms and Analysis Tools B 3](2019/fall-2019.md#b-3-backtracking)
 * [ ] [Summer 2019, Algorithms and Analysis Tool B 3](2019/summer-2019.md#b-3-backtracking)
+* [ ] [Fall 2018, Algorithms and Analysis Tool B 3](2018/fall-2018.md#b-3-backtracking)
+* [ ] [Spring 2018, Algorithms and Analysis Tool B 3](2018/spring-2018.md#b-3-backtracking)
+* [ ] [Summer 2017, Algorithms and Analysis Tool B 3](2017/summer-2017.md#b-3-backtracking)
+* [ ] [Spring 2017, Algorithms and Analysis Tool B 3](2017/spring-2017.md#b-3-backtracking)
 
 ### Binary Search Trees
 
@@ -48,6 +52,9 @@
 
 * [ ] [Spring 2020, Algorithms and Analysis Tools B 3](2020/spring-2020.md#b-3-bitwise-operators)
 * [ ] [Spring 2019, Algorithms and Analysis Tool B 3](2019/spring-2019.md#b-3-bitwise-operators)
+* [ ] [Summer 2018, Algorithms and Analysis Tool B 3](2018/summer-2018.md#b-3-bitwise-operators)
+* [ ] [Fall 2017, Algorithms and Analysis Tool B 3](2017/fall-2017.md#b-3-bitwise-operators)
+* [ ] [Fall 2016, Algorithms and Analysis Tool B 3](2016/fall-2016.md#b-3-bitwise-operators)
 
 ### Dynamic Memory Management in C
 
@@ -107,6 +114,13 @@
 * [ ] [Fall 2019, Algorithms and Analysis Tools B 1](2019/fall-2019.md#b-1-recursive-coding)
 * [ ] [Summer 2019, Algorithms and Analysis Tool B 1](2019/summer-2019.md#b-1-recursive-coding)
 * [ ] [Spring 2019, Algorithms and Analysis Tool B 1](2019/spring-2019.md#b-1-recursive-coding)
+* [ ] [Fall 2018, Algorithms and Analysis Tool B 1](2018/fall-2018.md#b-1-recursive-coding)
+* [ ] [Summer 2018, Algorithms and Analysis Tool B 1](2018/summer-2018.md#b-1-recursive-coding)
+* [ ] [Spring 2018, Algorithms and Analysis Tool B 1](2018/spring-2018.md#b-1-recursive-coding)
+* [ ] [Fall 2017, Algorithms and Analysis Tool B 1](2017/fall-2017.md#b-1-recursive-coding)
+* [ ] [Summer 2017, Algorithms and Analysis Tool B 1](2017/summer-2017.md#b-1-recursive-coding)
+* [ ] [Spring 2017, Algorithms and Analysis Tool B 1](2017/spring-2017.md#b-1-recursive-coding)
+* [ ] [Fall 2016, Algorithms and Analysis Tool B 1](2016/fall-2016.md#b-1-recursive-coding)
 
 ### Sorting
 
@@ -114,6 +128,13 @@
 * [ ] [Fall 2019, Algorithms and Analysis Tools B 2](2019/fall-2019.md#b-2-sorting)
 * [ ] [Summer 2019, Algorithms and Analysis Tool B 2](2019/summer-2019.md#b-2-sorting)
 * [ ] [Spring 2019, Algorithms and Analysis Tool B 2](2019/spring-2019.md#b-2-sorting)
+* [ ] [Fall 2018, Algorithms and Analysis Tool B 2](2018/fall-2018.md#b-2-sorting)
+* [ ] [Summer 2018, Algorithms and Analysis Tool B 2](2018/summer-2018.md#b-2-sorting)
+* [ ] [Spring 2018, Algorithms and Analysis Tool B 2](2018/spring-2018.md#b-2-sorting)
+* [ ] [Fall 2017, Algorithms and Analysis Tool B 2](2017/fall-2017.md#b-2-sorting)
+* [ ] [Summer 2017, Algorithms and Analysis Tool B 2](2017/summer-2017.md#b-2-sorting)
+* [ ] [Spring 2017, Algorithms and Analysis Tool B 2](2017/spring-2017.md#b-2-sorting)
+* [ ] [Fall 2016, Algorithms and Analysis Tool B 2](2016/fall-2016.md#b-2-sorting)
 
 ### Stacks/Queues
 

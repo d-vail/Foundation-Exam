@@ -321,10 +321,9 @@ _**Grading: 1 pt per tree, try to judge each insertion based on their previous t
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-Write an **_efficient recursive_** function that takes in a **_sorted_** array `numbers`, two integers, `low` and `high`, representing indexes into the array, and another integer, `value`, and returns the index in the array where `value` is found in the array in between index `low` and `high`, inclusive. If value is NOT found in the array in between indexes `low` and `high`, inclusive, then the function should return -1.
+Write an _**efficient recursive**_ function that takes in a _**sorted**_ array `numbers`, two integers, `low` and `high`, representing indexes into the array, and another integer, `value`, and returns the index in the array where `value` is found in the array in between index `low` and `high`, inclusive. If value is NOT found in the array in between indexes `low` and `high`, inclusive, then the function should return -1.
 
 ```c
 int search(int numbers[], int low, int high, int value)
@@ -332,17 +331,15 @@ int search(int numbers[], int low, int high, int value)
   // your code
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 int search(int numbers[], int low, int high, int value)
 {
   if (low > high) return -1;
     int mid = (low+high)/2;
-  
+
   if (value > numbers[mid])
     return search(numbers, mid+1, high, value);
   else if (value < numbers[mid])
@@ -353,15 +350,15 @@ int search(int numbers[], int low, int high, int value)
 ```
 
 **Grading**:
-- 2 pts for return -1 base case
-- 3 pts for going halfway in between search range
-- 2 pts for case going to the right
-- 2 pts for case going to the left
-- 1 pt for base case returning mid
-- Max grade of 7 for linear recursive solution (no pts for going halfway...)
-- Max grade of 3 pts for non-recursive solution, regardless of runtime.
-- Max grade of 6 if recursive structure is correct but recursive call(s) are missing
 
+* 2 pts for return -1 base case
+* 3 pts for going halfway in between search range
+* 2 pts for case going to the right
+* 2 pts for case going to the left
+* 1 pt for base case returning mid
+* Max grade of 7 for linear recursive solution \(no pts for going halfway...\)
+* Max grade of 3 pts for non-recursive solution, regardless of runtime.
+* Max grade of 6 if recursive structure is correct but recursive call\(s\) are missing
 {% endtab %}
 {% endtabs %}
 
@@ -369,25 +366,23 @@ int search(int numbers[], int low, int high, int value)
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 5 points
 
-(a) (3 pts) Explain why, in the worst case, Quick Sort runs more slowly than Merge Sort.
+\(a\) \(3 pts\) Explain why, in the worst case, Quick Sort runs more slowly than Merge Sort.
 
-In the worst case for Quick Sort, every time the array get split into two sides, if the split is extremely unequal (0 items on one size and all n-1 items except the partition element on the other side), worst case behavior occurs because there are n nested recursive calls on arrays of size n, n-1, n-2, and so forth.
+In the worst case for Quick Sort, every time the array get split into two sides, if the split is extremely unequal \(0 items on one size and all n-1 items except the partition element on the other side\), worst case behavior occurs because there are n nested recursive calls on arrays of size n, n-1, n-2, and so forth.
 
 In Merge Sort, it's guaranteed that the recursive calls always split into two arrays of roughly equal size. In general, the more equal the split between the two recursive calls is, the better the overall run-time will be. Because the Merge Sort split is essentially fixed, its worst case run time is near equal to its average case run time. But for Quick Sort, since this split at each level of recursion can be arbitrarily unequal, in the worst case where it's extremely unequal, the sort performs worse than Merge Sort.
 
-**_Grading: The amount of detail above isn't necessary. Full credit to any response that recognizes that when making two recursive calls it's better to split the input array equally and that Merge Sort guarantees this but for Quick Sort this doesn't happen in the worst case. Award partial credit as you see fit._**
+_**Grading: The amount of detail above isn't necessary. Full credit to any response that recognizes that when making two recursive calls it's better to split the input array equally and that Merge Sort guarantees this but for Quick Sort this doesn't happen in the worst case. Award partial credit as you see fit.**_
 
-(b) (2 pts) In practice, Quick Sort runs slightly faster than Merge Sort. This is because the partition function can be run "in place" while the merge function can not. More clearly explain what it means to run the partition function "in place".
+\(b\) \(2 pts\) In practice, Quick Sort runs slightly faster than Merge Sort. This is because the partition function can be run "in place" while the merge function can not. More clearly explain what it means to run the partition function "in place".
 
-To run the partition function in place means that the function doesn't have to allocate significant extra memory other than the original array to sort that is passed to it. In particular, only a single temporary extra variable is needed to perform swapping (along with the usual loop index variables). Otherwise, most of the work occurs within the already allocated memory of the array passed to the partition function.
+To run the partition function in place means that the function doesn't have to allocate significant extra memory other than the original array to sort that is passed to it. In particular, only a single temporary extra variable is needed to perform swapping \(along with the usual loop index variables\). Otherwise, most of the work occurs within the already allocated memory of the array passed to the partition function.
 
-The merge function allocates a new array such that values from the original array are copied into the newly allocated array, then copied back to the original array. Thus, this function doesn't run in place as it routinely allocates a linear amount of memory (in the size of the arrays its merging) to perform its tasks. This runs slower in practice because of the extra copy back step, even though Merge Sort splits its data in the recursive step in a more equitable (and better) fashion.
+The merge function allocates a new array such that values from the original array are copied into the newly allocated array, then copied back to the original array. Thus, this function doesn't run in place as it routinely allocates a linear amount of memory \(in the size of the arrays its merging\) to perform its tasks. This runs slower in practice because of the extra copy back step, even though Merge Sort splits its data in the recursive step in a more equitable \(and better\) fashion.
 
-**_Grading: Again, the amount of detail written above isn't necessary. Give full credit for any response that simply says that "in place" means performing the task without extra memory, (or a constant amount of extra memory.) Award partial credit as you see fit._**
-
+_**Grading: Again, the amount of detail written above isn't necessary. Give full credit for any response that simply says that "in place" means performing the task without extra memory, \(or a constant amount of extra memory.\) Award partial credit as you see fit.**_
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -399,10 +394,9 @@ The merge function allocates a new array such that values from the original arra
 
 {% tabs %}
 {% tab title="Question" %}
-
 #### 10 points
 
-Consider the problem of placing 8 kings on an 8 x 8 chessboard, so that no two of the kings can attack each other **_AND no two kings are on the same row or column_**. (Recall that a King can move one space in each of the eight possible directions of movement: up, down, left, right or any of the four diagonals.) Complete the code skeleton below so that it prints out each solution to the 8 Kings problem. (Note: assume that the function print, which isn't included, prints out the solution that corresponds to a particular permutation of kings. For example, the permutation {2, 4, 6, 1, 3, 5, 7, 0} represents kings at the following locations (0, 2), (1, 4), (2, 6), (3, 1), (4, 3), (5, 5), (6, 7), and (7, 0).)
+Consider the problem of placing 8 kings on an 8 x 8 chessboard, so that no two of the kings can attack each other _**AND no two kings are on the same row or column**_. \(Recall that a King can move one space in each of the eight possible directions of movement: up, down, left, right or any of the four diagonals.\) Complete the code skeleton below so that it prints out each solution to the 8 Kings problem. \(Note: assume that the function print, which isn't included, prints out the solution that corresponds to a particular permutation of kings. For example, the permutation {2, 4, 6, 1, 3, 5, 7, 0} represents kings at the following locations \(0, 2\), \(1, 4\), \(2, 6\), \(3, 1\), \(4, 3\), \(5, 5\), \(6, 7\), and \(7, 0\).\)
 
 ```c
 #include <stdio.h>
@@ -436,11 +430,9 @@ void go(int perm[], int k, int used[]) {
   }
 }
 ```
-
 {% endtab %}
 
 {% tab title="Solution" %}
-
 ```c
 #include <stdio.h>
 #include <math.h>
@@ -473,7 +465,6 @@ void go(int perm[], int k, int used[]) {
   }
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
