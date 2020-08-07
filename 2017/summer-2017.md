@@ -300,10 +300,33 @@ _**Grading: Deleting 79 creates an imbalance at 70 that must be corrected.**_
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 5 points
+
+Write a recursive function that returns the product of the digits of its integer input parameter, n. You may assume that n is non-negative. For example, productDigits(274) should return 56, since 2 x 7 x 4 = 56.
+
+```c
+int productDigits(int n)
+{
+  // your code
+}
+```
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+```c
+int productDigits(int n)
+{
+  if (n < 10)                           // 1 pt
+    return n;                           // 1 pt
+
+  return (n%10)*productDigits(n/10);    // 1 pt return
+                                        // 1 pts n%10
+                                        // 1 pt *pD(n/10)
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -312,10 +335,44 @@ _**Grading: Deleting 79 creates an imbalance at 70 that must be corrected.**_
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
+
+(a) (5 pts) Show the contents of the following array after each iteration of Bubble Sort. The result after both the first and last iteration have been included for convenience. (Note: due to the nature of this question, relatively little partial credit will be awarded for incorrect answers.)
+
+![](../.gitbook/assets/summer-2017-aa-b-2-a.png)
+
+(b) (5 pts) The array shown below has been partitioned exactly once (first function call in a Quick Sort of an array.) Which element was the partition element? Why?
+
+![](../.gitbook/assets/summer-2017-aa-b-2-b.png)
+
+Partition Element Index: 
+Partition Element Value: 
+Reason it was the Partition Element:
+
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+(a)
+
+![](../.gitbook/assets/summer-2017-aa-b-2-sol-a.png)
+
+**_Grading: 1 pt per each row, to earn the point all values in the row have to be correct._**
+
+(b)
+
+![](../.gitbook/assets/summer-2017-aa-b-2-sol-b.png)
+
+Partition Element Index: 5 **_Grading: 1 pt_**
+Partition Element Value: 27 **_Grading: 1 pt_**
+
+Reason it was the Partition Element:
+
+It is the only value for each everything to the left of it is less than it and everything to the right of it is greater than it. (For 16, 19, 13 and 12, we have 9 to its right, so these four can't be the partition. 9 can't be the partition since 12 is to its left, 49 can't be the partition since 33 to is to its right, and 33 can't be the partition because 49 is to its left.)
+
+**_Grading: 3 pts for the reason, the details in the ()'s need not be in student responses, but a clear understanding that the partition element is the one where everything to its left is less than it and everything to its right is greater than it is necessary for full credit. Award partial credit as necessary._**
 
 {% endtab %}
 {% endtabs %}
@@ -324,10 +381,114 @@ _**Grading: Deleting 79 creates an imbalance at 70 that must be corrected.**_
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
+
+For the purposes of this question we define a Top Left Knight's Path to be a sequence of jumps taken by a single knight piece, starting at the top left corner of a R by C board, which visits each square exactly once. The knight may end on any square on the board. Recall that the way a knight jumps is by either moving 1 square left or right, followed by 2 squares up or down, OR by moving 2 squares left or right, followed by 1 square up or down. In this question you'll complete a recursive function that counts the total number of Top Left Knight's Paths for a particular R and C (which will be constants in the code.) Your code should use the constants R and C and should still work if the values of these constants were changed. Complete the recursive function below so that it correctly solves this task. Just fill out the blanks given to you in the recursive function.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#define R 6
+#define C 6
+#define NUMDIR 8
+const int DR[] = {-2,-2,-1,-1,1,1,2,2};
+const int DC[] = {-1,1,-2,2,-2,2,-1,1};
+
+int main() {
+  printf("There were %d Top Left Knight Paths.\n", countTours());
+  return 0;
+}
+
+int countTours() {
+  int used[R][C], i, j;
+
+  for (i=0; i<R; i++)
+    for (j=0; j<C; j++)
+      used[i][j] = 0;
+  
+  return countToursRec(used, 0, 0, 0);
+}
+
+int countToursRec(int used[][C], int numMarked, int curR, int curC) {
+  if (numMarked == __________________ )
+    return ____;
+    
+  int i, res = 0;
+  for (i=0; i<NUMDIR; i++) 
+  {
+    int nextR = _____________________________;
+    int nextC = _____________________________;
+    
+    if (inbounds(nextR, nextC) && _____________________________________ )
+    {
+      used[nextR][nextC] = ____ ;
+      res += countToursRec(used, _______________, ________ , ________ );
+      used[nextR][nextC] = ____ ;
+    }
+  }
+  return res;
+}
+
+int inbounds(int nextR, int nextC) {
+  return nextR >= 0 && nextR < R && nextC >= 0 && nextC < C;
+}
+```
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#define R 6
+#define C 6
+#define NUMDIR 8
+const int DR[] = {-2,-2,-1,-1,1,1,2,2};
+const int DC[] = {-1,1,-2,2,-2,2,-1,1};
+
+int main() {
+  printf("There were %d Top Left Knight Paths.\n", countTours());
+  return 0;
+}
+
+int countTours() {
+  int used[R][C], i, j;
+
+  for (i=0; i<R; i++)
+    for (j=0; j<C; j++)
+      used[i][j] = 0;
+  
+  return countToursRec(used, 0, 0, 0);
+}
+
+int countToursRec(int used[][C], int numMarked, int curR, int curC) {
+  if (numMarked == R*C)
+    return 1;
+    
+  int i, res = 0;
+  for (i=0; i<NUMDIR; i++) 
+  {
+    int nextR = curR + DR[i];
+    int nextC = curC + DC[i];
+    
+    if (inbounds(nextR, nextC) && !used[nextR][nextC] )
+    {
+      used[nextR][nextC] = 1 ;
+      res += countToursRec(used, numMarked + 1, nextR , nextC );
+      used[nextR][nextC] = 0 ;
+    }
+  }
+  return res;
+}
+
+int inbounds(int nextR, int nextC) {
+  return nextR >= 0 && nextR < R && nextC >= 0 && nextC < C;
+}
+```
+
+**_Grading: 1 pt per slot, must be perfectly correct to earn the point._**
 
 {% endtab %}
 {% endtabs %}

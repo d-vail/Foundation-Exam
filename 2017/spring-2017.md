@@ -304,10 +304,51 @@ _**Grading: 2 pts**_
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
+
+Write a recursive function that returns 1 if an array of size n is in sorted order from smallest to largest with all values less than or equal to max, and 0 otherwise. Note: If array a stores 3, 6, 7, 7, 12, then `isSorted(a, 12, 5)` should return 1 but `isSorted(a, 11, 5)` should return 0. If array b stores 3, 4, 9, 8, then `isSorted(b, 20, 4)` should return 0, since 9 is bigger than 8 but appears before it.
+
+```c
+int isSorted(int* array, int max, int n)
+{
+  // your code
+}
+```
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+
+```c
+int isSorted(int* array, int max, int n)
+{
+  if (n == 0) return 1;                     // 3 pts
+  if (array[n-1] > max) return 0;           // 3 pts
+  return isSorted(array, array[n-1], n-1);  // 4 pts
+}
+```
+
+Grading: 
+
+Lots of ways to solve this problem. Map their solution to the cases laid out here:
+
+- 0/1 size case: 3 pts
+- Checking last element too big: 3 pts
+- Recursive call if last pair (or first pair) is valid: 4 pts
+
+The points are mapped so that many items could be off by a tiny bit, so adjust the points as necessary. If there are two small errors in two different places each worth 2 pts, just take off 1 point for one of the two errors and let the other one go.
+
+Note: If max was not a parameter to the function and we wanted to simply write a recursive function that determined if the array specified by the parameters was sorted or not, the following function would suffice:
+
+```c
+int isSortedAlt(int* array, int n) {
+  if (n < 2) return 1;
+  if (array[n-1] < array[n-2]) return 0;
+  return isSortedAlt(array, n-1);
+}
+```
 
 {% endtab %}
 {% endtabs %}
@@ -316,10 +357,20 @@ _**Grading: 2 pts**_
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 5 points
+
+Consider running a Merge Sort on the array shown below. Show the state of the array **right before** the last Merge is performed. (Note: due to the nature of this question, relatively little partial credit will be awarded for incorrect answers.)
+
+![](../.gitbook/assets/spring-2017-aa-b-2.png)
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+![](../.gitbook/assets/spring-2017-aa-b-2-sol.png)
+
+**_Grading: 5 pts for correct answer, 2 pts for sorted pairs (8 13 2 9 1 17 5 6), 2 pts for (2 8 9 13 1 17 6 5), 2 pts for (1 2 8 9 13 17 6 5), 0 pts for all others_**
 
 {% endtab %}
 {% endtabs %}
@@ -328,10 +379,102 @@ _**Grading: 2 pts**_
 
 {% tabs %}
 {% tab title="Question" %}
+
 #### 10 points
+
+A D-digit divisible number is a positive integer of D digits (with no leading digits zero) such that each of its prefixes of k digits is a number divisible by k. For example, 52240 is a 5-digit divisble number because 5 is divisible by 1, 52 is divisible by 2, 522 is divisible by 3, 5224 is divisible by 4 and 52240 is divisible by 5. Assume that there exists a function as specified below:
+
+`int kDigitPrefixValue(char* number, int k);`
+
+such that if number is storing the string version of an integer that is at least k digits long, then the function will return the integer value of the first k digits represented in number. For example, `kDigitPrefixValue("52240", 4)` will return the integer 5224.
+
+Complete the recursive function below so that it will print out all 6-digit divisible numbers. (A complete wrapper function is provided for you, so just fill out the blanks in the recursive function.)
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int kDigitPrefixValue(char* number, int k);
+void printkDivisibleRec(char* number, int k);
+void wrapper(int numdigits);
+
+int main() {
+  wrapper(6);
+  return 0;
+}
+
+void wrapper(int numdigits) {
+  char* tmp = malloc(sizeof(char)*(numdigits+1));
+  int i;
+  for (i=0; i<numdigits; i++) tmp[i] = '0';
+  tmp[numdigits] = '\0';
+  printkDivisibleRec(tmp, 0);
+  free(tmp);
+}
+
+void printkDivisibleRec(char* number, int k) {
+  if (k == strlen(number)) {
+    printf("%s\n", number);
+    return;
+  }
+
+  int i = k == 0 ? 1 : 0;
+  
+  for (; i < ____ ; i++) {
+    number[ ___ ] = (char)( ____ +'0');
+    int prefix = ___________________________(number, _______ );
+    if ( __________ %( ________ ) == ____ )
+      _____________________________(number, ________ );
+  }
+}
+```
+
 {% endtab %}
 
 {% tab title="Solution" %}
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int kDigitPrefixValue(char* number, int k);
+void printkDivisibleRec(char* number, int k);
+void wrapper(int numdigits);
+
+int main() {
+  wrapper(6);
+  return 0;
+}
+
+void wrapper(int numdigits) {
+  char* tmp = malloc(sizeof(char)*(numdigits+1));
+  int i;
+  for (i=0; i<numdigits; i++) tmp[i] = '0';
+  tmp[numdigits] = '\0';
+  printkDivisibleRec(tmp, 0);
+  free(tmp);
+}
+
+void printkDivisibleRec(char* number, int k) {
+  if (k == strlen(number)) {
+    printf("%s\n", number);
+    return;
+  }
+
+  int i = k == 0 ? 1 : 0;
+  
+  for (; i < 10 ; i++) {
+    number[ k ] = (char)( i +'0');
+    int prefix = kDigitPrefixValue(number, k+1);
+    if ( prefix %( k+1 ) == 0 )
+      printDivisibleRec(number, k+1);
+  }
+}
+```
+
+**_Grading: 1 pt per blank_**
 
 {% endtab %}
 {% endtabs %}
