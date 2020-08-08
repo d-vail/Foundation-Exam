@@ -370,6 +370,12 @@ int search(int numbers[], int low, int high, int value)
 
 \(a\) \(3 pts\) Explain why, in the worst case, Quick Sort runs more slowly than Merge Sort.
 
+\(b\) \(2 pts\) In practice, Quick Sort runs slightly faster than Merge Sort. This is because the partition function can be run "in place" while the merge function can not. More clearly explain what it means to run the partition function "in place".
+{% endtab %}
+
+{% tab title="Solution" %}
+\(a\) \(3 pts\) Explain why, in the worst case, Quick Sort runs more slowly than Merge Sort.
+
 In the worst case for Quick Sort, every time the array get split into two sides, if the split is extremely unequal \(0 items on one size and all n-1 items except the partition element on the other side\), worst case behavior occurs because there are n nested recursive calls on arrays of size n, n-1, n-2, and so forth.
 
 In Merge Sort, it's guaranteed that the recursive calls always split into two arrays of roughly equal size. In general, the more equal the split between the two recursive calls is, the better the overall run-time will be. Because the Merge Sort split is essentially fixed, its worst case run time is near equal to its average case run time. But for Quick Sort, since this split at each level of recursion can be arbitrarily unequal, in the worst case where it's extremely unequal, the sort performs worse than Merge Sort.
@@ -383,10 +389,6 @@ To run the partition function in place means that the function doesn't have to a
 The merge function allocates a new array such that values from the original array are copied into the newly allocated array, then copied back to the original array. Thus, this function doesn't run in place as it routinely allocates a linear amount of memory \(in the size of the arrays its merging\) to perform its tasks. This runs slower in practice because of the extra copy back step, even though Merge Sort splits its data in the recursive step in a more equitable \(and better\) fashion.
 
 _**Grading: Again, the amount of detail written above isn't necessary. Give full credit for any response that simply says that "in place" means performing the task without extra memory, \(or a constant amount of extra memory.\) Award partial credit as you see fit.**_
-{% endtab %}
-
-{% tab title="Solution" %}
-
 {% endtab %}
 {% endtabs %}
 

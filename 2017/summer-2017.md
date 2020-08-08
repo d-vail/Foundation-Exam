@@ -341,7 +341,11 @@ int productDigits(int n)
 
 ![](../.gitbook/assets/summer-2017-aa-b-2-b.png)
 
-Partition Element Index: Partition Element Value: Reason it was the Partition Element:
+Partition Element Index:
+
+Partition Element Value:
+
+Reason it was the Partition Element:
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -355,7 +359,9 @@ _**Grading: 1 pt per each row, to earn the point all values in the row have to b
 
 ![](../.gitbook/assets/summer-2017-aa-b-2-sol-b.png)
 
-Partition Element Index: 5 _**Grading: 1 pt**_ Partition Element Value: 27 _**Grading: 1 pt**_
+Partition Element Index: 5 _**Grading: 1 pt**_ 
+
+Partition Element Value: 27 _**Grading: 1 pt**_
 
 Reason it was the Partition Element:
 

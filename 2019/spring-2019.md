@@ -481,7 +481,11 @@ int fcomp(int n, int k)
 10.}
 ```
 
-Return value of the function in terms of n: Line number to change to fix the function: Line of code to replace that line:
+Return value of the function in terms of n: 
+
+Line number to change to fix the function: 
+
+Line of code to replace that line:
 {% endtab %}
 
 {% tab title="Solution" %}
@@ -493,7 +497,11 @@ _**Grading: 5 pts for the correct answer, 2 pts if each pair is sorted, 1 pt if 
 
 \(b\)
 
-Return value of the function in terms of n: $$\frac{n(n-1)}{2}$$, the sum of the first n-1 non-negative integers. Line number to change to fix the function: 4 Line of code to replace that line: `for (j = i+1; j < n; j++) {`
+Return value of the function in terms of n: $$\frac{n(n-1)}{2}$$, the sum of the first n-1 non-negative integers. 
+
+Line number to change to fix the function: 4 
+
+Line of code to replace that line: `for (j = i+1; j < n; j++) {`
 
 As it’s currently written, the code compares each value arr\[i\] to all other values in the array and adds 1 to res each time arr\[i\] is bigger. So, for the largest value in the array n-1 is added to res, for the second largest value in the array n-2 is added, and so forth, so res will simply be the sum of the integers from 0 to n-1. The issue with the code is that it doesn’t enforce the restriction i &lt; j given in the definition of an inversion. To enforce this, we force j &gt; i by making j’s starting value i+1, the smallest integer greater than j.
 
